@@ -1,22 +1,39 @@
 import React from "react";
 import "./TripForm.css";
+import bg from "../assets/formbg.png";
 
 function TripForm() {
   return (
-    <div className="container justify-content-center">
-      <div className="row mt-5">
+    <div className="container">
+      <div className="row pt-5">
         <form className="schedule__form">
           <div className="col px-2">
-            <input type="text" className="form-control" placeholder="Destination" />
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Destination"
+            />
           </div>
           <div className="col px-2">
-            <input type="text" className="form-control" placeholder="Departure date" />
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Departure date"
+            />
           </div>
           <div className="col px-2">
-            <input type="text" className="form-control" placeholder="Return date" />
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Return date"
+            />
           </div>
           <div className="col px-2">
-            <input type="text" className="form-control" placeholder="Number of people" />
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Number of people"
+            />
           </div>
         </form>
 
