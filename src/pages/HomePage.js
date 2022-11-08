@@ -5,7 +5,8 @@ import TripForm from "../component/TripForm";
 
 function HomePage() {
   return (
-    <div>
+    <div className="homepage">
+      <img class="bg" src="../assets/background.png" alt="" />
       <Header />
       <TripForm />
       <Footer />
