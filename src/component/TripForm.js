@@ -4,8 +4,8 @@ import "./TripForm.css";
 function TripForm() {
   return (
     <div>
-      <div className="schedule__form">
-        <form>
+      <div className="stack">
+        <form className="schedule__form">
           <input placeholder="Destination" />
           <input placeholder="Departure date" />
           <input placeholder="Return date" />

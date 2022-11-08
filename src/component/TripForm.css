@@ -5,7 +5,9 @@
     flex-direction: column;
 }
 
-input {
+form {
+    display: flex;
+    flex-direction: row;
     width: 140px;
     margin-right: 14px;
 }
