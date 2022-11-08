@@ -1,9 +1,9 @@
-.schedule__form {
+/* .schedule__form {
     display: flex;
     justify-content: center;
     padding-top: 2rem;
     flex-direction: column;
-}
+} */
 
 form {
     display: flex;
