@@ -3,11 +3,14 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    background-color: azure;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .logo {
-    width: 100px;
-    padding: 10px;
+    width: 150px;
+    padding-left: 24px;
 }
 
 nav {
