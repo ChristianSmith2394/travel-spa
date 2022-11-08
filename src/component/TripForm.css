@@ -1,41 +1,20 @@
-/* .schedule__form {
-    display: flex;
-    justify-content: center;
-    padding-top: 2rem;
-    flex-direction: column;
-} */
-
-form {
-    display: flex;
-    flex-direction: row;
-    width: 140px;
-    margin-right: 14px;
-}
-
-.btn {
-    display: flex;
-    justify-content: center;
-    height: 37px;
-}
-
-.container {
+.formBG {
     background-image: url("../assets/formbg.png");
-    min-width: 100%;
-    min-height: 250px;
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+    min-width: 100%;
+    min-height: 50%;
     display: flex;
-    justify-content: center;
+    align-items: center;
   }
 
-  .row {
-    max-width: 70%;
-    margin-right: 0;
-  }
-
-
-/* .form-control {
-    margin:0 5px;
-} */
+.row {
+    /* max-width: 75%; */
+    /* max-height: 50%; */
+}
+    
+#form {
+    background-color: rgba(240, 255, 255, 0.75);
+}
+    
