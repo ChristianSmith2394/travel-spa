@@ -16,14 +16,14 @@ function TripForm() {
           </div>
           <div className="col px-2">
             <input
-              type="text"
+              type="date"
               className="form-control"
               placeholder="Departure date"
             />
           </div>
           <div className="col px-2">
             <input
-              type="text"
+              type="date"
               className="form-control"
               placeholder="Return date"
             />
