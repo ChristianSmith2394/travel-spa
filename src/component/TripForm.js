@@ -10,10 +10,10 @@ function TripForm() {
             <input type="text" className="form-control" placeholder="Destination" />
           </div>
           <div className="col px-2">
-            <input type="text" className="form-control" placeholder="Departure date" />
+            <input type="date" className="form-control" placeholder="Departure date" />
           </div>
           <div className="col px-2">
-            <input type="text" className="form-control" placeholder="Return date" />
+            <input type="date" className="form-control" placeholder="Return date" />
           </div>
           <div className="col px-2">
             <input type="text" className="form-control" placeholder="Number of people" />
