@@ -15,7 +15,26 @@ form {
 .btn {
     display: flex;
     justify-content: center;
+    height: 37px;
 }
+
+.container {
+    background-image: url("../assets/formbg.png");
+    min-width: 100%;
+    min-height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .row {
+    max-width: 70%;
+    margin-right: 0;
+  }
+
 
 /* .form-control {
     margin:0 5px;
