@@ -3,17 +3,27 @@ import "./TripForm.css";
 
 function TripForm() {
   return (
-    <div>
-      <div className="stack">
+    <div className="container justify-content-center">
+      <div className="row mt-5">
         <form className="schedule__form">
-          <input placeholder="Destination" />
-          <input placeholder="Departure date" />
-          <input placeholder="Return date" />
-          <input placeholder="Number of people" />
+          <div className="col">
+            <input type="text" class="form-control" placeholder="Destination" />
+          </div>
+          <div className="col">
+            <input type="text" class="form-control" placeholder="Departure date" />
+          </div>
+          <div className="col">
+            <input type="text" class="form-control" placeholder="Return date" />
+          </div>
+          <div className="col">
+            <input type="text" class="form-control" placeholder="Number of people" />
+          </div>
         </form>
 
-        <div className="btn">
-          <button>Search</button>
+        <div className="btn mt-3">
+          <button type="button" className="btn btn-light">
+            Search
+          </button>
         </div>
       </div>
     </div>
