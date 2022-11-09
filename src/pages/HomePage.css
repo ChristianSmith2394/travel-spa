@@ -26,14 +26,7 @@
     width: 25%;
   }
 
-  img {
+a > img {
     vertical-align: bottom;
     width: 100%;
   }
-
-  /* .row-2 {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-  } */
