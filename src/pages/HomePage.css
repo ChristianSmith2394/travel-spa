@@ -1,10 +1,28 @@
 .homepage {
     background-color: rgb(0, 60, 59);
-    height: 100vh;
+    height: 100%;
 }
 .bg {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    /* align-items: center; */
+    /* justify-content: center; */
+    height: auto;
+  }
+
+  .row-1 {
+    display: flex;
+    /* justify-content: space-evenly; */
+    /* width: 100%; */
+  }
+
+  a {
+    line-height: 1;
+    display: flex;
+    max-width: 530px;
+    justify-content: space-around;
+  }
+
+  img {
+    vertical-align: bottom;
+    max-width: 530px;
   }
