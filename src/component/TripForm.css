@@ -8,26 +8,20 @@
     display: flex;
     align-items: center;
   }
-
-.row {
-    /* max-width: 75%; */
-    /* max-height: 50%; */
-}
-    
+ 
 #form {
     background-color: rgba(240, 255, 255, 0.75);
     margin-top: 6rem;
     margin-bottom: 6rem;
 }
     
-
 .btn-ckt {
     color: #fff;
     background-color: rgba(0, 60, 59, .6);
-    border-color: #357ebd; /*set the color you want here*/
+    border-color: rgba(0, 60, 59, .6); /*set the color you want here*/
 }
 .btn-ckt:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
     color: #fff;
     background-color: rgb(0, 60, 59);
-    border-color: #285e8e; /*set the color you want here*/
+    border-color: rgba(0, 60, 59); /*set the color you want here*/
 }
