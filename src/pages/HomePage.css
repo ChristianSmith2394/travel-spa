@@ -1,5 +1,7 @@
 .homepage {
-    background-color: rgb(0, 60, 59);
+    background: #003c3b;
+    background: rgb(0,60,59);
+    background: linear-gradient(0deg, rgba(238,238,238,1) 0%, rgba(0,60,59,0.6169818269104517) 33%, rgba(0,60,59,1) 63%);
     height: 100%;
 }
 .bg {
@@ -26,14 +28,7 @@
     width: 25%;
   }
 
-  img {
+a > img {
     vertical-align: bottom;
     width: 100%;
   }
-
-  /* .row-2 {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-  } */
