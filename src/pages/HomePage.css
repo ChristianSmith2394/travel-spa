@@ -1,10 +1,39 @@
 .homepage {
     background-color: rgb(0, 60, 59);
-    height: 100vh;
+    height: 100%;
 }
 .bg {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    /* justify-content: center; */
     height: 100vh;
+    flex-direction: column;
+    justify-content: space-around;
   }
+
+  .row-1, .row-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  a {
+    line-height: 1;
+    display: flex;
+    /* max-width: 530px; */
+    justify-content: space-around;
+    width: 25%;
+  }
+
+  img {
+    vertical-align: bottom;
+    width: 100%;
+  }
+
+  /* .row-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+  } */

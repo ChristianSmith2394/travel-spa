@@ -11,7 +11,28 @@ function HomePage() {
       <Header />
       <TripForm />
       <div className="bg">
-        <img src={background} alt="random filler" />
+        <div className="row-1">
+          <a href="https://google.com">
+            <img src={background} alt="random filler" />
+          </a>
+          <a href="https://apple.com">
+            <img src={background} alt="random filler" />
+          </a>
+          <a href="https://google.com">
+            <img src={background} alt="random filler" />
+          </a>
+        </div>
+        <div className="row-2">
+          <a href="https://google.com">
+            <img src={background} alt="random filler" />
+          </a>
+          <a href="https://apple.com">
+            <img src={background} alt="random filler" />
+          </a>
+          <a href="https://google.com">
+            <img src={background} alt="random filler" />
+          </a>
+        </div>
       </div>
       <Footer />
     </div>
