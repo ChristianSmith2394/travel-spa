@@ -18,9 +18,20 @@ function HomePage() {
           <a href="https://apple.com">
             <img src={background} alt="random filler" />
           </a>
-          {/* <a href="https://google.com">
+          <a href="https://google.com">
             <img src={background} alt="random filler" />
-          </a> */}
+          </a>
+        </div>
+        <div className="row-2">
+          <a href="https://google.com">
+            <img src={background} alt="random filler" />
+          </a>
+          <a href="https://apple.com">
+            <img src={background} alt="random filler" />
+          </a>
+          <a href="https://google.com">
+            <img src={background} alt="random filler" />
+          </a>
         </div>
       </div>
       <Footer />

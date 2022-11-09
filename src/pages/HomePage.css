@@ -6,23 +6,34 @@
     display: flex;
     /* align-items: center; */
     /* justify-content: center; */
-    height: auto;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-around;
   }
 
-  .row-1 {
+  .row-1, .row-2 {
     display: flex;
-    /* justify-content: space-evenly; */
-    /* width: 100%; */
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
   }
 
   a {
     line-height: 1;
     display: flex;
-    max-width: 530px;
+    /* max-width: 530px; */
     justify-content: space-around;
+    width: 25%;
   }
 
   img {
     vertical-align: bottom;
-    max-width: 530px;
+    width: 100%;
   }
+
+  /* .row-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+  } */
