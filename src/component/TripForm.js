@@ -53,13 +53,11 @@ function TripForm() {
             />
             <label for="returnDate">Return Date</label>
           </div>
-          <div className="row p-3">
-            <div className="btn mt-3">
-              <button type="submit" className="btn btn-outline-success">
-                Search
-              </button>
-            </div>
-          </div>
+        </div>
+        <div className="row p-3">
+            <button type="submit" className="btn btn-ckt">
+              Search
+            </button>
         </div>
       </div>
     </div>
