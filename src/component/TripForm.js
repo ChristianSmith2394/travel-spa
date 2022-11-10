@@ -2,25 +2,21 @@ import React from "react";
 import "./TripForm.css";
 import SyncAltIcon from "@mui/icons-material/SyncAlt";
 import TrendingFlatIcon from "@mui/icons-material/TrendingFlat";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
 
 function TripForm() {
   return (
     <div className="formBG">
       <div className="container border rounded" id="form">
-        <div className="trip-container">
-          <div className="trip-btn btn-ckt">
-            <button type="radio">
-              <TrendingFlatIcon />
-              <p>One way</p>
-            </button>
-          </div>
-          <div className="trip-btn btn-ckt">
-            <button type="radio">
-              <SyncAltIcon />
-              <p>Round-trip</p>
-            </button>
-          </div>
-        </div>
+        <Stack className="pt-3 px-3" direction="row" spacing={1}>
+          <Button variant="outlined" startIcon={<TrendingFlatIcon />}>
+            One way
+          </Button>
+          <Button variant="outlined" startIcon={<SyncAltIcon />}>
+            Round-trip
+          </Button>
+        </Stack>
         <div className="row p-3">
           <div className="col px-2 form-floating">
             <input
