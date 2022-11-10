@@ -4,27 +4,37 @@ import SyncAltIcon from "@mui/icons-material/SyncAlt";
 import TrendingFlatIcon from "@mui/icons-material/TrendingFlat";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
+import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
+import ToggleButton from "@mui/material/ToggleButton";
 
 function TripForm() {
+  const [alignment, setAlignment] = React.useState("round-trip");
+
+  const handleChange = (event, newAlignment) => {
+    setAlignment(newAlignment);
+  };
+
   return (
     <div className="formBG">
       <div className="container border rounded" id="form">
-        <Stack className="pt-3 px-3" direction="row" spacing={1}>
-          <Button
-            variant="outlined"
-            color="success"
-            startIcon={<TrendingFlatIcon />}
-          >
-            One way
-          </Button>
-          <Button
-            variant="outlined"
-            color="success"
-            startIcon={<SyncAltIcon />}
-          >
+        <ToggleButtonGroup
+          className="pt-3 px-3"
+          color="primary"
+          value={alignment}
+          exclusive
+          onChange={handleChange}
+          aria-label="Platform"
+        >
+          <ToggleButton value="round-trip" variant="outlined" color="success">
             Round-trip
-          </Button>
-        </Stack>
+            <SyncAltIcon />
+          </ToggleButton>
+          <ToggleButton value="one-way" variant="outlined" color="success">
+            One way
+            <TrendingFlatIcon />
+          </ToggleButton>
+        </ToggleButtonGroup>
+
         <div className="row p-3">
           <div className="col px-2 form-floating">
             <input
