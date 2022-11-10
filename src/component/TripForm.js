@@ -1,11 +1,27 @@
 import React from "react";
 import "./TripForm.css";
+import SyncAltIcon from "@mui/icons-material/SyncAlt";
+import TrendingFlatIcon from "@mui/icons-material/TrendingFlat";
 
 function TripForm() {
   return (
     <div className="formBG">
       <div className="container border rounded" id="form">
-        <div className="row p-3 pt-5">
+        <div className="trip-container">
+          <div className="trip-btn btn-ckt">
+            <button type="radio">
+              <TrendingFlatIcon />
+              <p>One way</p>
+            </button>
+          </div>
+          <div className="trip-btn btn-ckt">
+            <button type="radio">
+              <SyncAltIcon />
+              <p>Round-trip</p>
+            </button>
+          </div>
+        </div>
+        <div className="row p-3">
           <div className="col px-2 form-floating">
             <input
               type="text"
@@ -55,9 +71,9 @@ function TripForm() {
           </div>
         </div>
         <div className="row p-3">
-            <button type="submit" className="btn btn-ckt">
-              Search
-            </button>
+          <button type="submit" className="btn btn-ckt">
+            Search
+          </button>
         </div>
       </div>
     </div>
