@@ -17,11 +17,26 @@
     
 .btn-ckt {
     color: #fff;
-    background-color: rgba(0, 60, 59, .6);
+    background-color: #003c3b99;
     border-color: rgba(0, 60, 59, .6); /*set the color you want here*/
 }
 .btn-ckt:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
     color: #fff;
-    background-color: rgb(0, 60, 59);
+    background-color: #003c3b;
     border-color: rgba(0, 60, 59); /*set the color you want here*/
 }
+
+/* .trip-container {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.trip-btn {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.trip-btn p {
+    margin-bottom: 0;
+} */
