@@ -10,10 +10,18 @@ function TripForm() {
     <div className="formBG">
       <div className="container border rounded" id="form">
         <Stack className="pt-3 px-3" direction="row" spacing={1}>
-          <Button variant="outlined" startIcon={<TrendingFlatIcon />}>
+          <Button
+            variant="outlined"
+            color="success"
+            startIcon={<TrendingFlatIcon />}
+          >
             One way
           </Button>
-          <Button variant="outlined" startIcon={<SyncAltIcon />}>
+          <Button
+            variant="outlined"
+            color="success"
+            startIcon={<SyncAltIcon />}
+          >
             Round-trip
           </Button>
         </Stack>
