@@ -94,11 +94,13 @@ function TripForm() {
                 onHover={handleOnHover}
                 onSelect={handleOnSelect}
                 onFocus={handleOnFocus}
+                showIcon={false}
+                placeholder="Departure"
                 autoFocus
                 formatResult={formatResult}
               />
             </div>
-            <label for="departureInput">Departure</label>
+            <label for="departureInput" />
           </div>
           <div className="col px-2 form-floating">
             {/* <input
