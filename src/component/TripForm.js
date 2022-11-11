@@ -66,6 +66,20 @@ function TripForm() {
               id="departureInput"
               placeholder="Departure"
             />
+
+            <table>
+              <tr>
+                <th>Code</th>
+                <th>Airport</th>
+              </tr>
+
+              {airports.map((airport, index) => {
+                <tr>
+                  <td>{airport.code}</td>
+                  <td>{airport.airport}</td>
+                </tr>;
+              })}
+            </table>
             <label for="departureInput">Departure</label>
           </div>
           <div className="col px-2 form-floating">
