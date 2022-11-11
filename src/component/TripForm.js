@@ -2,17 +2,26 @@ import React from "react";
 import "./TripForm.css";
 import SyncAltIcon from "@mui/icons-material/SyncAlt";
 import TrendingFlatIcon from "@mui/icons-material/TrendingFlat";
-import Button from "@mui/material/Button";
-import Stack from "@mui/material/Stack";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import ToggleButton from "@mui/material/ToggleButton";
+import TextField from "@mui/material/TextField";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
 function TripForm() {
   const [alignment, setAlignment] = React.useState("round-trip");
 
+  const [departDate, setDepartDate] = React.useState([null, null]);
+
+  const [returnDate, setReturnDate] = React.useState([null, null]);
+
   const handleChange = (event, newAlignment) => {
     setAlignment(newAlignment);
+    console.log(alignment);
   };
+
+  // const onClick =
 
   return (
     <div className="formBG">
@@ -64,25 +73,47 @@ function TripForm() {
             <label for="passengersInput">Passengers</label>
           </div>
         </div>
-        <div className="row p-3">
-          <div className="col px-2 form-floating">
-            <input
-              type="date"
-              className="form-control"
-              id="departureDate"
-              placeholder="Departure Date"
-            />
-            <label for="departureDate">Departure Date</label>
-          </div>
-          <div className="col px-2 form-floating">
-            <input
-              type="date"
-              className="form-control form-floating"
-              id="returnDate"
-              placeholder="Return Date"
-            />
-            <label for="returnDate">Return Date</label>
-          </div>
+        <div>
+          {alignment === "one-way" ? (
+            <div>
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <DatePicker
+                  className="col px-2 form-floating"
+                  label="Departure Date"
+                  value={departDate}
+                  onChange={(newValue) => {
+                    setDepartDate(newValue);
+                  }}
+                  renderInput={(params) => <TextField {...params} />}
+                />
+              </LocalizationProvider>
+            </div>
+          ) : (
+            <div>
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <DatePicker
+                  className="col px-2 form-floating"
+                  label="Departure Date"
+                  value={departDate}
+                  onChange={(newValue) => {
+                    setDepartDate(newValue);
+                  }}
+                  renderInput={(params) => <TextField {...params} />}
+                />
+              </LocalizationProvider>
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <DatePicker
+                  className="col px-2 form-floating"
+                  label="Return Date"
+                  value={returnDate}
+                  onChange={(newValue) => {
+                    setReturnDate(newValue);
+                  }}
+                  renderInput={(params) => <TextField {...params} />}
+                />
+              </LocalizationProvider>
+            </div>
+          )}
         </div>
         <div className="row p-3">
           <button type="submit" className="btn btn-ckt">
