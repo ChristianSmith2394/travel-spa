@@ -1,7 +1,7 @@
 [
-  { "code": "UTK", "airport": "Utirik Airport" },
-  { "code": "OCA", "airport": "Ocean Reef Club Airport" },
-  { "code": "PQS", "airport": "Pilot Station Airport" },
+  { "id": 1, "code": "UTK", "airport": "Utirik Airport" },
+  { "id": 2, "code": "OCA", "airport": "Ocean Reef Club Airport" },
+  { "id": 3, "code": "PQS", "airport": "Pilot Station Airport" },
   { "code": "CSE", "airport": "Crested Butte Airpark" },
   { "code": "JCY", "airport": "LBJ Ranch Airport" },
   { "code": "PMX", "airport": "Metropolitan Airport" },

@@ -8,7 +8,8 @@ import TextField from "@mui/material/TextField";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import { airports } from "../data/airports";
+import Data from "../data/airports.json";
+import { ReactSearchAutocomplete } from "react-search-autocomplete";
 
 function TripForm() {
   const [alignment, setAlignment] = React.useState("round-trip");
@@ -17,18 +18,45 @@ function TripForm() {
 
   const [returnDate, setReturnDate] = React.useState([null, null]);
 
-  const [searchInput, setSearchInput] = React.useState("");
-
-  const handleSearch = (e) => {
-    e.preventDefault();
-    setSearchInput(e.target.value);
+  const handleOnSearch = (string, results) => {
+    // onSearch will have as the first callback parameter
+    // the string searched and for the second the results.
+    console.log(string, results);
+    return string, results;
   };
 
-  if (searchInput.length > 0) {
-    airports.filter((airport) => {
-      return airport.name.match(searchInput);
-    });
-  }
+  const handleOnHover = (result) => {
+    // the item hovered
+    console.log(result);
+    return result;
+  };
+
+  const handleOnSelect = (Data) => {
+    // the item selected
+    console.log(Data);
+    return Data;
+  };
+
+  const handleOnFocus = () => {
+    console.log("Focused");
+  };
+
+  const formatResult = (Data) => {
+    return (
+      <>
+        <span
+        // style={{ display: "block", textAlign: "left" }}
+        >
+          Code:{Data.code}
+        </span>
+        <span
+        // style={{ display: "block", textAlign: "left" }}
+        >
+          Airport: {Data.airport}
+        </span>
+      </>
+    );
+  };
 
   const handleChange = (event, newAlignment) => {
     setAlignment(newAlignment);
@@ -58,39 +86,29 @@ function TripForm() {
 
         <div className="row p-3">
           <div className="col px-2 form-floating">
-            <input
-              type="text"
-              className="form-control"
-              onChange={handleSearch}
-              value={searchInput}
-              id="departureInput"
-              placeholder="Departure"
-            />
-
-            <table>
-              <tr>
-                <th>Code</th>
-                <th>Airport</th>
-              </tr>
-
-              {airports.map((airport, index) => {
-                <tr>
-                  <td>{airport.code}</td>
-                  <td>{airport.airport}</td>
-                </tr>;
-              })}
-            </table>
+            <div style={{ width: 400 }}>
+              <ReactSearchAutocomplete
+                items={Data}
+                fuseOptions={{ keys: ["code", "airport"] }}
+                onSearch={handleOnSearch}
+                onHover={handleOnHover}
+                onSelect={handleOnSelect}
+                onFocus={handleOnFocus}
+                autoFocus
+                formatResult={formatResult}
+              />
+            </div>
             <label for="departureInput">Departure</label>
           </div>
           <div className="col px-2 form-floating">
-            <input
+            {/* <input
               type="text"
               className="form-control"
               onChange={handleSearch}
               value={searchInput}
               id="destinationInput"
               placeholder="Destination"
-            />
+            /> */}
             <label for="destinationInput">Destination</label>
           </div>
           <div className="col px-2 form-floating">
