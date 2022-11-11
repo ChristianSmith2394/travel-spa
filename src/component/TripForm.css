@@ -26,17 +26,6 @@
     border-color: rgba(0, 60, 59); /*set the color you want here*/
 }
 
-/* .trip-container {
-    padding-top: 1rem;
-    display: flex;
-    justify-content: center;
+.round-trip {
+    visibility: hidden;
 }
-
-.trip-btn {
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-
-.trip-btn p {
-    margin-bottom: 0;
-} */

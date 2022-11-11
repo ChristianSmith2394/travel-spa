@@ -2,8 +2,6 @@ import React from "react";
 import "./TripForm.css";
 import SyncAltIcon from "@mui/icons-material/SyncAlt";
 import TrendingFlatIcon from "@mui/icons-material/TrendingFlat";
-import Button from "@mui/material/Button";
-import Stack from "@mui/material/Stack";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import ToggleButton from "@mui/material/ToggleButton";
 
@@ -65,7 +63,7 @@ function TripForm() {
           </div>
         </div>
         <div className="row p-3">
-          <div className="col px-2 form-floating">
+          <div className="one-way col px-2 form-floating">
             <input
               type="date"
               className="form-control"
@@ -74,7 +72,16 @@ function TripForm() {
             />
             <label for="departureDate">Departure Date</label>
           </div>
-          <div className="col px-2 form-floating">
+          <div className="round-trip col px-2 form-floating">
+            <input
+              type="date"
+              className="form-control"
+              id="departureDate"
+              placeholder="Departure Date"
+            />
+            <label for="departureDate">Departure Date</label>
+          </div>
+          <div className="round-trip col px-2 form-floating">
             <input
               type="date"
               className="form-control form-floating"
