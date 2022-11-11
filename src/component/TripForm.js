@@ -8,6 +8,7 @@ import TextField from "@mui/material/TextField";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import { airports } from "../data/airports";
 
 function TripForm() {
   const [alignment, setAlignment] = React.useState("round-trip");
@@ -16,12 +17,23 @@ function TripForm() {
 
   const [returnDate, setReturnDate] = React.useState([null, null]);
 
+  const [searchInput, setSearchInput] = React.useState("");
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    setSearchInput(e.target.value);
+  };
+
+  if (searchInput.length > 0) {
+    airports.filter((airport) => {
+      return airport.name.match(searchInput);
+    });
+  }
+
   const handleChange = (event, newAlignment) => {
     setAlignment(newAlignment);
     console.log(alignment);
   };
-
-  // const onClick =
 
   return (
     <div className="formBG">
@@ -49,6 +61,8 @@ function TripForm() {
             <input
               type="text"
               className="form-control"
+              onChange={handleSearch}
+              value={searchInput}
               id="departureInput"
               placeholder="Departure"
             />
@@ -58,6 +72,8 @@ function TripForm() {
             <input
               type="text"
               className="form-control"
+              onChange={handleSearch}
+              value={searchInput}
               id="destinationInput"
               placeholder="Destination"
             />
@@ -73,7 +89,7 @@ function TripForm() {
             <label for="passengersInput">Passengers</label>
           </div>
         </div>
-        <div>
+        <div className="row px-1">
           {alignment === "one-way" ? (
             <div>
               <LocalizationProvider dateAdapter={AdapterDayjs}>
