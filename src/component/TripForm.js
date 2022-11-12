@@ -47,15 +47,10 @@ function TripForm() {
         <span
         // style={{ display: "block", textAlign: "left" }}
         >
-          Code: {Data.code}
+          {Data.code} - {Data.airport}
           <br />
         </span>
 
-        <span
-        // style={{ display: "block", textAlign: "left" }}
-        >
-          Airport: {Data.airport}
-        </span>
       </>
     );
   };
