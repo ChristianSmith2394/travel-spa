@@ -8,6 +8,8 @@ import TextField from "@mui/material/TextField";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import Data from "../data/airports.json";
+import { ReactSearchAutocomplete } from "react-search-autocomplete";
 
 function TripForm() {
   const [alignment, setAlignment] = React.useState("round-trip");
@@ -16,12 +18,52 @@ function TripForm() {
 
   const [returnDate, setReturnDate] = React.useState([null, null]);
 
+  const handleOnSearch = (string, results) => {
+    // onSearch will have as the first callback parameter
+    // the string searched and for the second the results.
+    console.log(string, results);
+    return string, results;
+  };
+
+  const handleOnHover = (result) => {
+    // the item hovered
+    console.log(result);
+    return result;
+  };
+
+  const handleOnSelect = (Data) => {
+    // the item selected
+    console.log(Data);
+    return Data;
+  };
+
+  const handleOnFocus = () => {
+    console.log("Focused");
+  };
+
+  const formatResult = (Data) => {
+    return (
+      <>
+        <span
+        // style={{ display: "block", textAlign: "left" }}
+        >
+          Code: {Data.code}
+          <br />
+        </span>
+
+        <span
+        // style={{ display: "block", textAlign: "left" }}
+        >
+          Airport: {Data.airport}
+        </span>
+      </>
+    );
+  };
+
   const handleChange = (event, newAlignment) => {
     setAlignment(newAlignment);
     console.log(alignment);
   };
-
-  // const onClick =
 
   return (
     <div className="formBG">
@@ -45,23 +87,33 @@ function TripForm() {
         </ToggleButtonGroup>
 
         <div className="row p-3">
-          <div className="col px-2 form-floating">
-            <input
-              type="text"
-              className="form-control"
-              id="departureInput"
+          <div className="col px-2">
+            <ReactSearchAutocomplete
+              items={Data}
+              fuseOptions={{ keys: ["airport"] }}
+              onSearch={handleOnSearch}
+              onHover={handleOnHover}
+              onSelect={handleOnSelect}
+              onFocus={handleOnFocus}
               placeholder="Departure"
+              autoFocus
+              formatResult={formatResult}
+              styling={{ zIndex: 2 }}
             />
-            <label for="departureInput">Departure</label>
           </div>
-          <div className="col px-2 form-floating">
-            <input
-              type="text"
-              className="form-control"
-              id="destinationInput"
-              placeholder="Destination"
+          <div className="col px-2">
+            <ReactSearchAutocomplete
+              items={Data}
+              fuseOptions={{ keys: ["airport"] }}
+              onSearch={handleOnSearch}
+              onHover={handleOnHover}
+              onSelect={handleOnSelect}
+              onFocus={handleOnFocus}
+              placeholder="Departure"
+              autoFocus
+              formatResult={formatResult}
+              styling={{ zIndex: 2 }}
             />
-            <label for="destinationInput">Destination</label>
           </div>
           <div className="col px-2 form-floating">
             <input
@@ -73,7 +125,7 @@ function TripForm() {
             <label for="passengersInput">Passengers</label>
           </div>
         </div>
-        <div>
+        <div className="row px-1">
           {alignment === "one-way" ? (
             <div>
               <LocalizationProvider dateAdapter={AdapterDayjs}>
