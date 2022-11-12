@@ -104,7 +104,7 @@ function TripForm() {
           <div className="col px-2">
             <ReactSearchAutocomplete
               items={Data}
-              fuseOptions={{ keys: ["airport"] }}
+              fuseOptions={{ keys: ["code", "airport"] }}
               onSearch={handleOnSearch}
               onHover={handleOnHover}
               onSelect={handleOnSelect}
