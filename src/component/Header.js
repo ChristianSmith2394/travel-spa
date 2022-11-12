@@ -8,7 +8,7 @@ function Header() {
     <header>
       <img src={logo} alt="logo" className="logo" />
       <nav>
-        <NavLink to="/flights" exact activeClassName="active">
+        <NavLink to="/" exact activeClassName="active">
           Flights
         </NavLink>
         <NavLink to="/cars" exact activeClassName="active">
