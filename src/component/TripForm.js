@@ -112,6 +112,7 @@ function TripForm() {
               placeholder="Departure"
               autoFocus
               formatResult={formatResult}
+              styling={{ zIndex: 2 }}
             />
           </div>
           <div className="col px-2 form-floating">
