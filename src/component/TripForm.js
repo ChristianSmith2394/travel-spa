@@ -129,8 +129,6 @@ function TripForm() {
                 iconColor: "grey",
                 lineColor: "rgb(232, 234, 237)",
                 placeholderColor: "grey",
-                clearIconMargin: "3px 14px 0 0",
-                searchIconMargin: "0 0 0 16px",
               }}
             />
           </div>
