@@ -47,8 +47,10 @@ function TripForm() {
         <span
         // style={{ display: "block", textAlign: "left" }}
         >
-          Code:{Data.code}
+          Code: {Data.code}
+          <br />
         </span>
+
         <span
         // style={{ display: "block", textAlign: "left" }}
         >
@@ -85,33 +87,32 @@ function TripForm() {
         </ToggleButtonGroup>
 
         <div className="row p-3">
-          <div className="col px-2 form-floating">
-            <div style={{ width: 400 }}>
-              <ReactSearchAutocomplete
-                items={Data}
-                fuseOptions={{ keys: ["code", "airport"] }}
-                onSearch={handleOnSearch}
-                onHover={handleOnHover}
-                onSelect={handleOnSelect}
-                onFocus={handleOnFocus}
-                showIcon={false}
-                placeholder="Departure"
-                autoFocus
-                formatResult={formatResult}
-              />
-            </div>
-            <label for="departureInput" />
+          <div className="col px-2">
+            <ReactSearchAutocomplete
+              items={Data}
+              fuseOptions={{ keys: ["airport"] }}
+              onSearch={handleOnSearch}
+              onHover={handleOnHover}
+              onSelect={handleOnSelect}
+              onFocus={handleOnFocus}
+              placeholder="Departure"
+              autoFocus
+              formatResult={formatResult}
+              styling={{ zIndex: 2 }}
+            />
           </div>
-          <div className="col px-2 form-floating">
-            {/* <input
-              type="text"
-              className="form-control"
-              onChange={handleSearch}
-              value={searchInput}
-              id="destinationInput"
-              placeholder="Destination"
-            /> */}
-            <label for="destinationInput">Destination</label>
+          <div className="col px-2">
+            <ReactSearchAutocomplete
+              items={Data}
+              fuseOptions={{ keys: ["airport"] }}
+              onSearch={handleOnSearch}
+              onHover={handleOnHover}
+              onSelect={handleOnSelect}
+              onFocus={handleOnFocus}
+              placeholder="Departure"
+              autoFocus
+              formatResult={formatResult}
+            />
           </div>
           <div className="col px-2 form-floating">
             <input
