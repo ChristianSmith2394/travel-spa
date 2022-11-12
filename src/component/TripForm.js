@@ -50,7 +50,6 @@ function TripForm() {
           {Data.code} - {Data.airport}
           <br />
         </span>
-
       </>
     );
   };
@@ -71,13 +70,13 @@ function TripForm() {
           onChange={handleChange}
           aria-label="Platform"
         >
-          <ToggleButton value="round-trip" variant="outlined" color="success">
-            Round-trip
-            <SyncAltIcon />
-          </ToggleButton>
           <ToggleButton value="one-way" variant="outlined" color="success">
             One way
             <TrendingFlatIcon />
+          </ToggleButton>
+          <ToggleButton value="round-trip" variant="outlined" color="success">
+            Round-trip
+            <SyncAltIcon />
           </ToggleButton>
         </ToggleButtonGroup>
 
@@ -115,7 +114,7 @@ function TripForm() {
               type="number"
               className="form-control"
               id="passengersInput"
-              placeholder="Passengers"
+              placeholder="     Passengers"
               style={{
                 height: "44px",
                 border: "1px solid #dfe1e5",
@@ -133,46 +132,44 @@ function TripForm() {
             />
           </div>
         </div>
-        <div className="row px-1">
+        <div className="row px-2">
           {alignment === "one-way" ? (
-            <div>
-              <LocalizationProvider dateAdapter={AdapterDayjs}>
-                <DatePicker
-                  className="col px-2 form-floating"
-                  label="Departure Date"
-                  value={departDate}
-                  onChange={(newValue) => {
-                    setDepartDate(newValue);
-                  }}
-                  renderInput={(params) => <TextField {...params} />}
-                />
-              </LocalizationProvider>
-            </div>
+                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                  <DatePicker
+                    className="col-6 px-2"
+                    label="Departure Date"
+                    value={departDate}
+                    onChange={(newValue) => {
+                      setDepartDate(newValue);
+                    }}
+                    renderInput={(params) => <TextField {...params} />}
+                  />
+                </LocalizationProvider>
           ) : (
-            <div>
-              <LocalizationProvider dateAdapter={AdapterDayjs}>
-                <DatePicker
-                  className="col px-2 form-floating"
-                  label="Departure Date"
-                  value={departDate}
-                  onChange={(newValue) => {
-                    setDepartDate(newValue);
-                  }}
-                  renderInput={(params) => <TextField {...params} />}
-                />
-              </LocalizationProvider>
-              <LocalizationProvider dateAdapter={AdapterDayjs}>
-                <DatePicker
-                  className="col px-2 form-floating"
-                  label="Return Date"
-                  value={returnDate}
-                  onChange={(newValue) => {
-                    setReturnDate(newValue);
-                  }}
-                  renderInput={(params) => <TextField {...params} />}
-                />
-              </LocalizationProvider>
-            </div>
+            <>
+                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                  <DatePicker
+                    className="col px-2"
+                    label="Departure Date"
+                    value={departDate}
+                    onChange={(newValue) => {
+                      setDepartDate(newValue);
+                    }}
+                    renderInput={(params) => <TextField {...params} />}
+                  />
+                </LocalizationProvider>
+                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                  <DatePicker
+                    className="col px-2"
+                    label="Return Date"
+                    value={returnDate}
+                    onChange={(newValue) => {
+                      setReturnDate(newValue);
+                    }}
+                    renderInput={(params) => <TextField {...params} />}
+                  />
+                </LocalizationProvider>
+            </>
           )}
         </div>
         <div className="row p-3">
