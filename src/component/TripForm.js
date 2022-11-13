@@ -8,32 +8,11 @@ import TextField from "@mui/material/TextField";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import Data from "../data/airports.json";
+import items from "../data/airports.json";
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
 
 function TripForm() {
-  const items = [
-    {
-      id: 0,
-      name: "Cobol",
-    },
-    {
-      id: 1,
-      name: "JavaScript",
-    },
-    {
-      id: 2,
-      name: "Basic",
-    },
-    {
-      id: 3,
-      name: "PHP",
-    },
-    {
-      id: 4,
-      name: "Java",
-    },
-  ];
+  console.log(items);
 
   const [alignment, setAlignment] = React.useState("round-trip");
 
@@ -54,31 +33,22 @@ function TripForm() {
     return result;
   };
 
-  const handleOnSelect = (Data) => {
+  const handleOnSelect = (item) => {
     // the item selected
-    console.log(Data);
-    return Data;
+    console.log(item);
+    return item;
   };
 
   const handleOnFocus = () => {
     console.log("Focused");
   };
 
-  // const formatResult = (Data) => {
-  //   return (
-  //     <>
-  //       <span>
-  //         {Data.code} - {Data.airport}
-  //         <br />
-  //       </span>
-  //     </>
-  //   );
-  // };
   const formatResult = (item) => {
     return (
       <>
-        <span style={{ display: "block", textAlign: "left" }}>
-          name: {item.name}
+        <span>
+          {item.code} - {item.name}
+          <br />
         </span>
       </>
     );
@@ -109,26 +79,11 @@ function TripForm() {
             <SyncAltIcon />
           </ToggleButton>
         </ToggleButtonGroup>
-
         <div className="row p-3">
           <div className="col px-2">
-            <div style={{ width: 400 }}>
-              <ReactSearchAutocomplete
-                items={Data}
-                fuseOptions={{ keys: ["code", "airport"] }}
-                resultStringKeyName={{ keys: ["code", "airport"] }}
-                onSearch={handleOnSearch}
-                onHover={handleOnHover}
-                onSelect={handleOnSelect}
-                onFocus={handleOnFocus}
-                autoFocus
-                formatResult={formatResult}
-                styling={{ zIndex: 3 }}
-              />
-            </div>
             <ReactSearchAutocomplete
-              items={Data}
-              // fuseOptions={{ keys: ["code", "airport"] }}
+              items={items}
+              fuseOptions={{ keys: ["code"] }}
               onSearch={handleOnSearch}
               onHover={handleOnHover}
               onSelect={handleOnSelect}
@@ -141,13 +96,13 @@ function TripForm() {
           </div>
           <div className="col px-2">
             <ReactSearchAutocomplete
-              items={Data}
-              fuseOptions={{ keys: ["code", "airport"] }}
+              items={items}
+              fuseOptions={{ keys: ["code"] }}
               onSearch={handleOnSearch}
               onHover={handleOnHover}
               onSelect={handleOnSelect}
               onFocus={handleOnFocus}
-              placeholder="Departure"
+              placeholder="Destination"
               autoFocus
               formatResult={formatResult}
               styling={{ zIndex: 2 }}
