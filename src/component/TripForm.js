@@ -47,8 +47,7 @@ function TripForm() {
     return (
       <>
         <span>
-          {item.code} - {item.name}
-          <br />
+          {item.code} - {item.name1}
         </span>
       </>
     );
