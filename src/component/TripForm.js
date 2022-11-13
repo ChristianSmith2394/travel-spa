@@ -8,10 +8,12 @@ import TextField from "@mui/material/TextField";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import Data from "../data/airports.json";
+import items from "../data/airports.json";
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
 
 function TripForm() {
+  console.log(items);
+
   const [alignment, setAlignment] = React.useState("round-trip");
 
   const [departDate, setDepartDate] = React.useState([null, null]);
@@ -19,8 +21,8 @@ function TripForm() {
   const [returnDate, setReturnDate] = React.useState([null, null]);
 
   const handleOnSearch = (string, results) => {
-    // onSearch will have as the first callback parameter
-    // the string searched and for the second the results.
+    // onSearch will have the first callback parameter as
+    // the string searched. For the second, the results.
     console.log(string, results);
     return string, results;
   };
@@ -31,23 +33,21 @@ function TripForm() {
     return result;
   };
 
-  const handleOnSelect = (Data) => {
+  const handleOnSelect = (item) => {
     // the item selected
-    console.log(Data);
-    return Data;
+    console.log(item);
+    return item;
   };
 
   const handleOnFocus = () => {
     console.log("Focused");
   };
 
-  const formatResult = (Data) => {
+  const formatResult = (item) => {
     return (
       <>
-        <span
-        // style={{ display: "block", textAlign: "left" }}
-        >
-          {Data.code} - {Data.airport}
+        <span>
+          {item.code} - {item.name}
           <br />
         </span>
       </>
@@ -79,12 +79,11 @@ function TripForm() {
             <SyncAltIcon />
           </ToggleButton>
         </ToggleButtonGroup>
-
         <div className="row p-3">
           <div className="col px-2">
             <ReactSearchAutocomplete
-              items={Data}
-              fuseOptions={{ keys: ["code", "airport"] }}
+              items={items}
+              fuseOptions={{ keys: ["code"] }}
               onSearch={handleOnSearch}
               onHover={handleOnHover}
               onSelect={handleOnSelect}
@@ -97,13 +96,13 @@ function TripForm() {
           </div>
           <div className="col px-2">
             <ReactSearchAutocomplete
-              items={Data}
-              fuseOptions={{ keys: ["code", "airport"] }}
+              items={items}
+              fuseOptions={{ keys: ["code"] }}
               onSearch={handleOnSearch}
               onHover={handleOnHover}
               onSelect={handleOnSelect}
               onFocus={handleOnFocus}
-              placeholder="Departure"
+              placeholder="Destination"
               autoFocus
               formatResult={formatResult}
               styling={{ zIndex: 2 }}
@@ -134,41 +133,41 @@ function TripForm() {
         </div>
         <div className="row px-2">
           {alignment === "one-way" ? (
-                <LocalizationProvider dateAdapter={AdapterDayjs}>
-                  <DatePicker
-                    className="col-6 px-2"
-                    label="Departure Date"
-                    value={departDate}
-                    onChange={(newValue) => {
-                      setDepartDate(newValue);
-                    }}
-                    renderInput={(params) => <TextField {...params} />}
-                  />
-                </LocalizationProvider>
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <DatePicker
+                className="col-6 px-2"
+                label="Departure Date"
+                value={departDate}
+                onChange={(newValue) => {
+                  setDepartDate(newValue);
+                }}
+                renderInput={(params) => <TextField {...params} />}
+              />
+            </LocalizationProvider>
           ) : (
             <>
-                <LocalizationProvider dateAdapter={AdapterDayjs}>
-                  <DatePicker
-                    className="col px-2"
-                    label="Departure Date"
-                    value={departDate}
-                    onChange={(newValue) => {
-                      setDepartDate(newValue);
-                    }}
-                    renderInput={(params) => <TextField {...params} />}
-                  />
-                </LocalizationProvider>
-                <LocalizationProvider dateAdapter={AdapterDayjs}>
-                  <DatePicker
-                    className="col px-2"
-                    label="Return Date"
-                    value={returnDate}
-                    onChange={(newValue) => {
-                      setReturnDate(newValue);
-                    }}
-                    renderInput={(params) => <TextField {...params} />}
-                  />
-                </LocalizationProvider>
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <DatePicker
+                  className="col px-2"
+                  label="Departure Date"
+                  value={departDate}
+                  onChange={(newValue) => {
+                    setDepartDate(newValue);
+                  }}
+                  renderInput={(params) => <TextField {...params} />}
+                />
+              </LocalizationProvider>
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <DatePicker
+                  className="col px-2"
+                  label="Return Date"
+                  value={returnDate}
+                  onChange={(newValue) => {
+                    setReturnDate(newValue);
+                  }}
+                  renderInput={(params) => <TextField {...params} />}
+                />
+              </LocalizationProvider>
             </>
           )}
         </div>
