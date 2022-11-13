@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../component/Header";
 import Footer from "../component/Footer";
 import TripForm from "../component/TripForm";
+import ShowMap from "../component/Map";
 import "./HomePage.css";
 import background from "../assets/background.png";
 // import port1 from "../assets/port1.png";
@@ -16,6 +17,7 @@ function HomePage() {
       <Header />
       <TripForm />
       <div className="bg">
+        {/* <ShowMap /> */}
         <div className="row-1">
           <a href="https://google.com">
             <img src={background} alt="random filler" />
