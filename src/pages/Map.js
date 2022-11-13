@@ -1,15 +1,17 @@
 import React from "react";
 import Header from "../component/Header";
 import Footer from "../component/Footer";
+import ShowMap from "../component/Map";
+import "./Map.css";
 
-function Cars() {
+function Map() {
   return (
-    <div>
+    <div className="map">
       <Header />
-      Cars
+      <ShowMap />
       <Footer />
     </div>
   );
 }
 
-export default Cars;
+export default Map;

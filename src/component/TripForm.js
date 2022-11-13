@@ -12,8 +12,6 @@ import items from "../data/airports.json";
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
 
 function TripForm() {
-  console.log(items);
-
   const [alignment, setAlignment] = React.useState("round-trip");
 
   const [departDate, setDepartDate] = React.useState([null, null]);
