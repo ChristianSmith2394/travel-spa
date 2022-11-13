@@ -83,7 +83,7 @@ function TripForm() {
           <div className="col px-2">
             <ReactSearchAutocomplete
               items={items}
-              fuseOptions={{ keys: ["code"] }}
+              fuseOptions={{ keys: ["code", "name"] }}
               onSearch={handleOnSearch}
               onHover={handleOnHover}
               onSelect={handleOnSelect}
@@ -97,7 +97,7 @@ function TripForm() {
           <div className="col px-2">
             <ReactSearchAutocomplete
               items={items}
-              fuseOptions={{ keys: ["code"] }}
+              fuseOptions={{ keys: ["code", "name"] }}
               onSearch={handleOnSearch}
               onHover={handleOnHover}
               onSelect={handleOnSelect}
