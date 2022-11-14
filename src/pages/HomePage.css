@@ -14,22 +14,7 @@
     background: linear-gradient(0deg, rgba(240,255,255,1) 15%, rgba(0,60,59,1) 75%);
   }
 
-  .row-1, .row-2 {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-  }
-
-  a {
-    line-height: 1;
-    display: flex;
-    /* max-width: 530px; */
-    justify-content: space-around;
-    width: 25%;
-  }
 
 a > img {
-    vertical-align: bottom;
     width: 100%;
   }

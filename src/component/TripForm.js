@@ -57,96 +57,89 @@ function TripForm() {
   };
 
   return (
-    <div className="formBG">
-      <div className="container-fluid mx-5 border rounded" id="form">
-        <div className="row pt-3 px-3">
-          <ToggleButtonGroup
-            color="primary"
-            value={alignment}
-            exclusive
-            onChange={handleChange}
-            aria-label="Platform"
-          >
-            <ToggleButton value="one-way" variant="outlined" color="success">
-              One way
-              <TrendingFlatIcon />
-            </ToggleButton>
-            <ToggleButton value="round-trip" variant="outlined" color="success">
-              Round-trip
-              <SyncAltIcon />
-            </ToggleButton>
-          </ToggleButtonGroup>
-        </div>
-        <div className="row p-3">
-          <div className="col px-2">
-            <ReactSearchAutocomplete
-              items={items}
-              fuseOptions={{ keys: ["code", "name"] }}
-              onSearch={handleOnSearch}
-              onHover={handleOnHover}
-              onSelect={handleOnSelect}
-              onFocus={handleOnFocus}
-              placeholder="Departure"
-              autoFocus
-              formatResult={formatResult}
-              styling={{ zIndex: 2 }}
-            />
+    <div className="container formBG">
+      <div className="col"></div>
+      <div className="col-10">
+        <div className="container-fluid border rounded" id="form">
+          <div className="row pt-3 px-3">
+            <ToggleButtonGroup
+              color="primary"
+              value={alignment}
+              exclusive
+              onChange={handleChange}
+              aria-label="Platform"
+            >
+              <ToggleButton value="one-way" variant="outlined" color="success">
+                One way
+                <TrendingFlatIcon />
+              </ToggleButton>
+              <ToggleButton
+                value="round-trip"
+                variant="outlined"
+                color="success"
+              >
+                Round-trip
+                <SyncAltIcon />
+              </ToggleButton>
+            </ToggleButtonGroup>
           </div>
-          <div className="col px-2">
-            <ReactSearchAutocomplete
-              items={items}
-              fuseOptions={{ keys: ["code", "name"] }}
-              onSearch={handleOnSearch}
-              onHover={handleOnHover}
-              onSelect={handleOnSelect}
-              onFocus={handleOnFocus}
-              placeholder="Destination"
-              autoFocus
-              formatResult={formatResult}
-              styling={{ zIndex: 2 }}
-            />
-          </div>
-          <div className="col px-2">
-            <input
-              type="number"
-              className="form-control"
-              id="passengersInput"
-              placeholder="     Passengers"
-              style={{
-                height: "44px",
-                border: "1px solid #dfe1e5",
-                borderRadius: "24px",
-                backgroundColor: "white",
-                boxShadow: "rgba(32, 33, 36, 0.28) 0px 1px 6px 0px",
-                hoverBackgroundColor: "#eee",
-                color: "#212121",
-                fontSize: "16px",
-                fontFamily: "Arial",
-                iconColor: "grey",
-                lineColor: "rgb(232, 234, 237)",
-                placeholderColor: "grey",
-              }}
-            />
-          </div>
-        </div>
-        <div className="row px-2">
-          {alignment === "one-way" ? (
-            <LocalizationProvider dateAdapter={AdapterDayjs}>
-              <DatePicker
-                className="col-6 px-2"
-                label="Departure Date"
-                value={departDate}
-                onChange={(newValue) => {
-                  setDepartDate(newValue);
-                }}
-                renderInput={(params) => <TextField {...params} />}
+          <div className="row p-3">
+            <div className="col px-2">
+              <ReactSearchAutocomplete
+                items={items}
+                fuseOptions={{ keys: ["code", "name"] }}
+                onSearch={handleOnSearch}
+                onHover={handleOnHover}
+                onSelect={handleOnSelect}
+                onFocus={handleOnFocus}
+                placeholder="Departure"
+                autoFocus
+                formatResult={formatResult}
+                styling={{ zIndex: 2 }}
               />
-            </LocalizationProvider>
-          ) : (
-            <>
+            </div>
+            <div className="col px-2">
+              <ReactSearchAutocomplete
+                items={items}
+                fuseOptions={{ keys: ["code", "name"] }}
+                onSearch={handleOnSearch}
+                onHover={handleOnHover}
+                onSelect={handleOnSelect}
+                onFocus={handleOnFocus}
+                placeholder="Destination"
+                autoFocus
+                formatResult={formatResult}
+                styling={{ zIndex: 2 }}
+              />
+            </div>
+            <div className="col px-2">
+              <input
+                type="number"
+                className="form-control"
+                id="passengersInput"
+                placeholder="     Passengers"
+                style={{
+                  height: "44px",
+                  border: "1px solid #dfe1e5",
+                  borderRadius: "24px",
+                  backgroundColor: "white",
+                  boxShadow: "rgba(32, 33, 36, 0.28) 0px 1px 6px 0px",
+                  hoverBackgroundColor: "#eee",
+                  color: "#212121",
+                  fontSize: "16px",
+                  fontFamily: "Arial",
+                  iconColor: "grey",
+                  lineColor: "rgb(232, 234, 237)",
+                  placeholderColor: "grey",
+                }}
+              />
+            </div>
+          </div>
+          <div className="row px-2">
+            {alignment === "one-way" ? (
               <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <DatePicker
-                  className="col px-2"
+                  className="col-6 px-2"
                   label="Departure Date"
                   value={departDate}
                   onChange={(newValue) => {
@@ -155,26 +148,43 @@ function TripForm() {
                   renderInput={(params) => <TextField {...params} />}
                 />
               </LocalizationProvider>
-              <LocalizationProvider dateAdapter={AdapterDayjs}>
-                <DatePicker
-                  className="col px-2"
-                  label="Return Date"
-                  value={returnDate}
-                  onChange={(newValue) => {
-                    setReturnDate(newValue);
-                  }}
-                  renderInput={(params) => <TextField {...params} />}
-                />
-              </LocalizationProvider>
-            </>
-          )}
-        </div>
-        <div className="col p-3">
-          <button type="submit" className="btn btn-ckt">
-            Search
-          </button>
+            ) : (
+              <>
+                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                  <DatePicker
+                    className="col px-2"
+                    label="Departure Date"
+                    value={departDate}
+                    onChange={(newValue) => {
+                      setDepartDate(newValue);
+                    }}
+                    renderInput={(params) => <TextField {...params} />}
+                  />
+                </LocalizationProvider>
+                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                  <DatePicker
+                    className="col px-2"
+                    label="Return Date"
+                    value={returnDate}
+                    onChange={(newValue) => {
+                      setReturnDate(newValue);
+                    }}
+                    renderInput={(params) => <TextField {...params} />}
+                  />
+                </LocalizationProvider>
+              </>
+            )}
+          </div>
+          <div className="row p-3">
+            <div className="col"></div>
+              <button type="submit" className="col-6 btn btn-ckt">
+                Search
+              </button>
+            <div className="col"></div>
+          </div>
         </div>
       </div>
+      <div className="col"></div>
     </div>
   );
 }
