@@ -5,22 +5,32 @@ import { NavLink } from "react-router-dom";
 
 function Header() {
   return (
-    <header className="jumbotron p-3 mb-0 rounded-0 ">
-      <div className="container">
+    <header className="jumbotron jumbotron-fluid p-3 mb-0 rounded-0 ">
+      <div className="container-fluid">
         <div className="row">
-          <div className="col-2">
-            <img src={logo} alt="logo" className="logo" />
+          <div className="col-4">
+            <a className="logo" href="/">
+              <img src={logo} alt="logo" />
+            </a>
           </div>
-          <div className="col"></div>
-          <div className="col-2">
-            <NavLink to="/" exact activeClassName="active" className="button">
-              Flights
-            </NavLink>
-          </div>
-          <div className="col-2">
-            <NavLink to="/login" exact activeClassName="active">
-              Login
-            </NavLink>
+          <div className="col-8">
+            <nav className="navbar">
+              <li className="nav-item">
+                <a className="navbar-brand" href="/">
+                  Home
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="navbar-brand" href="/map">
+                  Map
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="navbar-brand" href="/login">
+                  Login
+                </a>
+              </li>
+            </nav>
           </div>
         </div>
       </div>

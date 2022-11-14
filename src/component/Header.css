@@ -7,19 +7,16 @@ header {
     /* padding-bottom: 10px; */
     /* padding-top: 10px; */
 }
-
+.jumbotron {
+    background-color: azure;
+}
 .logo {
-    width: 200%;
+    width: 70%;
+    /* align-items: flex-start; */
     /* padding-left: 24px; */
 }
 
-/* nav {
-    display: flex;
-    justify-content: space-around;
-    width: 80%;
-} */
-
-a {
+/* a {
     text-decoration: none;
     font-weight: 600;
-}
+} */

@@ -58,7 +58,7 @@ function TripForm() {
 
   return (
     <div className="formBG">
-      <div className="container border rounded" id="form">
+      <div className="container-fluid mx-5 border rounded" id="form">
         <div className="row pt-3 px-3">
           <ToggleButtonGroup
             color="primary"
