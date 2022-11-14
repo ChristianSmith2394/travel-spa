@@ -59,23 +59,24 @@ function TripForm() {
   return (
     <div className="formBG">
       <div className="container border rounded" id="form">
-        <ToggleButtonGroup
-          className="pt-3 px-3"
-          color="primary"
-          value={alignment}
-          exclusive
-          onChange={handleChange}
-          aria-label="Platform"
-        >
-          <ToggleButton value="one-way" variant="outlined" color="success">
-            One way
-            <TrendingFlatIcon />
-          </ToggleButton>
-          <ToggleButton value="round-trip" variant="outlined" color="success">
-            Round-trip
-            <SyncAltIcon />
-          </ToggleButton>
-        </ToggleButtonGroup>
+        <div className="row pt-3 px-3">
+          <ToggleButtonGroup
+            color="primary"
+            value={alignment}
+            exclusive
+            onChange={handleChange}
+            aria-label="Platform"
+          >
+            <ToggleButton value="one-way" variant="outlined" color="success">
+              One way
+              <TrendingFlatIcon />
+            </ToggleButton>
+            <ToggleButton value="round-trip" variant="outlined" color="success">
+              Round-trip
+              <SyncAltIcon />
+            </ToggleButton>
+          </ToggleButtonGroup>
+        </div>
         <div className="row p-3">
           <div className="col px-2">
             <ReactSearchAutocomplete
@@ -168,7 +169,7 @@ function TripForm() {
             </>
           )}
         </div>
-        <div className="row p-3">
+        <div className="col p-3">
           <button type="submit" className="btn btn-ckt">
             Search
           </button>

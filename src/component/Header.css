@@ -1,23 +1,23 @@
 header {
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 100%; */
     background-color: azure;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    /* padding-bottom: 10px; */
+    /* padding-top: 10px; */
 }
 
 .logo {
-    width: 250px;
-    padding-left: 24px;
+    width: 200%;
+    /* padding-left: 24px; */
 }
 
-nav {
+/* nav {
     display: flex;
     justify-content: space-around;
     width: 80%;
-}
+} */
 
 a {
     text-decoration: none;
