@@ -4,7 +4,7 @@ import "./Footer.css";
 function Footer() {
   return (
     <footer>
-      <h5>© Copyright CKT Entertainment</h5>
+      <h5>© 2022 Copyright CKT Entertainment 2024</h5>
     </footer>
   );
 }
