@@ -11,8 +11,8 @@ header {
     background-color: azure;
 }
 .logo {
-    width: 100%;
-    max-width: 250px;
+    /* width: 100%; */
+    /* max-width: 250px; */
     /* align-items: flex-start; */
     /* padding-left: 24px; */
 }
@@ -20,4 +20,8 @@ header {
 a {
     text-decoration: none;
     font-weight: 600;
+}
+
+.navbar {
+    background-color: azure;
 }
