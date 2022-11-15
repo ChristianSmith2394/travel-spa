@@ -5,12 +5,12 @@ import "./Header.css";
 function Header() {
   return (
     <nav class="navbar navbar-light navbar-expand-sm">
-      <div class="container">
+      <div class="container-fluid">
         <a class="col-3 navbar-brand" href="#">
           <img src={logo} alt="logo" />
         </a>
         <ul class="navbar-nav">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="/">
               Home
             </a>
