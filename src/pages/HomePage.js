@@ -5,14 +5,12 @@ import TripForm from "../component/TripForm";
 import ShowMap from "../component/Map";
 import "./HomePage.css";
 
-
 function HomePage() {
   return (
     <div className="homepage">
       <Header />
       <TripForm />
-
-        {/* <ShowMap /> */}
+      <ShowMap />
 
       <Footer />
     </div>
