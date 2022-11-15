@@ -16,29 +16,42 @@ function HomePage() {
     <div className="homepage">
       <Header />
       <TripForm />
-      <div className="bg">
+        <div className="row p-3"></div>
+      <div className="container-fluid bg">
         {/* <ShowMap /> */}
-        <div className="row-1">
-          <a href="https://google.com">
-            <img src={background} alt="random filler" />
-          </a>
-          <a href="https://apple.com">
-            <img src={port5} alt="random filler" />
-          </a>
-          <a href="https://google.com">
-            <img src={background} alt="random filler" />
-          </a>
+        <div className="row">
+          <div className="col">
+            <a href="https://google.com">
+              <img src={background} alt="random filler" />
+            </a>
+          </div>
+          <div className="col">
+            <a href="https://apple.com">
+              <img src={port5} alt="random filler" />
+            </a>
+          </div>
+          <div className="col">
+            <a href="https://google.com">
+              <img src={background} alt="random filler" />
+            </a>
+          </div>
         </div>
-        <div className="row-2">
-          <a href="https://google.com">
-            <img src={port5} alt="random filler" />
-          </a>
-          <a href="https://apple.com">
-            <img src={background} alt="random filler" />
-          </a>
-          <a href="https://google.com">
-            <img src={port5} alt="random filler" />
-          </a>
+        <div className="row">
+          <div className="col px-2">
+            <a href="https://google.com">
+              <img src={port5} alt="random filler" />
+            </a>
+          </div>
+          <div className="col px-2">
+            <a href="https://apple.com">
+              <img src={background} alt="random filler" />
+            </a>
+          </div>
+          <div className="col">
+            <a href="https://google.com">
+              <img src={port5} alt="random filler" />
+            </a>
+          </div>
         </div>
       </div>
       <Footer />

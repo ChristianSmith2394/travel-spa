@@ -1,22 +1,20 @@
 header {
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 100%; */
     background-color: azure;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    /* padding-bottom: 10px; */
+    /* padding-top: 10px; */
 }
-
+.jumbotron {
+    background-color: azure;
+}
 .logo {
-    width: 250px;
-    padding-left: 24px;
-}
-
-nav {
-    display: flex;
-    justify-content: space-around;
-    width: 80%;
+    width: 100%;
+    max-width: 250px;
+    /* align-items: flex-start; */
+    /* padding-left: 24px; */
 }
 
 a {
