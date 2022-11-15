@@ -1,20 +1,8 @@
 .homepage {
-    background: #003c3b;
+    background-color: azure;
     height: 100%;
   }
-  
-.bg {
-    display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
-    height: 100vh;
-    flex-direction: column;
-    justify-content: space-around;
-    background: rgb(240,255,255);
-    background: linear-gradient(0deg, rgba(240,255,255,1) 15%, rgba(0,60,59,1) 75%);
-  }
 
-
-a > img {
-    width: 100%;
-  }
+#logo {
+  max-height: 100px;
+}

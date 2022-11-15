@@ -7,21 +7,12 @@ header {
     /* padding-bottom: 10px; */
     /* padding-top: 10px; */
 }
-.jumbotron {
-    background-color: azure;
-}
-.logo {
-    /* width: 100%; */
-    max-width: 250px;
-    /* align-items: flex-start; */
-    /* padding-left: 24px; */
-}
 
-a {
+.nav-link {
     text-decoration: none;
     font-weight: 600;
 }
 
-.navbar {
+.navbar-nav {
     background-color: azure;
 }

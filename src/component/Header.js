@@ -7,17 +7,12 @@ function Header() {
     <nav class="navbar navbar-light navbar-expand-sm">
       <div class="container-fluid">
         <a class="col-3 navbar-brand" href="#">
-          <img src={logo} alt="logo" />
+          <img src={logo} alt="logo" id="logo" />
         </a>
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link" href="/">
               Home
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/results">
-              Result
             </a>
           </li>
           <li class="nav-item">
