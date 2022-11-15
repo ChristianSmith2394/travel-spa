@@ -1,7 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import "./Header.css";
+import { Modal, Button, Form } from "react-bootstrap";
 
+function InfoModal() {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const handleLogin = () => {
+    setShow(true);
+  };
+
+  return (
+    <>
+      <Button className="nextButton btn-ckt" onClick={handleShow}>
+        Login
+      </Button>
+
+      <Modal show={show} onHide={handleClose} size="lg">
+        <Modal.Header closeButton>
+          <Modal.Title>Login</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Label>Email address</Form.Label>
+              <Form.Control type="email" placeholder="Enter email" />
+              <Form.Text className="text-muted">
+                We'll never share your email with anyone else.
+              </Form.Text>
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Label>Password</Form.Label>
+              <Form.Control type="password" placeholder="Password" />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicCheckbox">
+              <Form.Check type="checkbox" label="Check me out" />
+            </Form.Group>
+          <Button variant="ckt" type="submit" onClick={handleClose}>
+            Login
+          </Button>
+          <Button variant="" onClick={handleClose}>
+            Cancel
+          </Button>
+          </Form>
+        </Modal.Body>
+        <Modal.Footer>
+        </Modal.Footer>
+      </Modal>
+    </>
+  );
+}
 
 function Header() {
   return (
@@ -22,29 +72,9 @@ function Header() {
             </a>
           </li>
           <li class="nav-item">
-              <button type="button" class="btn btn-ckt" data-bs-toggle="modal" data-bs-target="#login">
-              Login
-            </button>
-            <div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="false">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="loginLabel">Modal TITLE</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    Modal BODY
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            </li>
+            <InfoModal />
+          </li>
         </ul>
-
       </div>
     </nav>
   );
