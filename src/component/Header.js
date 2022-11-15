@@ -6,10 +6,10 @@ function Header() {
   return (
     <nav class="navbar navbar-light navbar-expand-sm">
       <div class="container-fluid">
-        <a class="col-3 navbar-brand" href="#">
+        <a class="col-2 ml-auto navbar-brand" href="#">
           <img src={logo} alt="logo" id="logo" />
         </a>
-        <ul class="navbar-nav">
+        <ul class="navbar-nav offset-7 mr-auto">
           <li class="nav-item">
             <a class="nav-link" href="/">
               Home
