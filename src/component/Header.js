@@ -18,7 +18,7 @@ function InfoModal() {
     auth
       .signInWithEmailAndPassword(email, password)
       .then((auth) => {
-        history("/");
+        handleClose();
       })
       .catch((error) => alert(error.message));
   };
@@ -35,10 +35,11 @@ function InfoModal() {
         }
       })
       .catch((error) => alert(error.message));
+    handleClose();
   };
-  const handleLogin = () => {
-    setShow(true);
-  };
+  // const handleLogin = () => {
+  //   setShow(true);
+  // };
 
   return (
     <>

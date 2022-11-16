@@ -1,3 +1,5 @@
+// THIS FILE NEEDS TO BE UPDATED ONCE BUILD FILE MADE
+
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
