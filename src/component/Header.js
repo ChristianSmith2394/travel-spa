@@ -1,15 +1,22 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import "./Header.css";
 import { Modal, Button, Form } from "react-bootstrap";
 import { auth } from "../firebase";
+import { useStateValue } from "./StateProvider";
 
 function InfoModal() {
+  // const [{ user }, dispatch] = useStateValue();
+  // const handleAuthenticaton = () => {
+  //   if (user) {
+  //     auth.signOut();
+  //   }
+  // };
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const history = useNavigate();
+  // const history = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const signIn = (e) => {
@@ -31,7 +38,7 @@ function InfoModal() {
       .then((auth) => {
         // it successfully created a new user with email and password
         if (auth) {
-          history("/");
+          handleClose();
         }
       })
       .catch((error) => alert(error.message));
@@ -44,7 +51,11 @@ function InfoModal() {
   return (
     <>
       <Button className="nextButton btn-ckt" onClick={handleShow}>
+        {/* <div onClick={handleAuthenticaton}>
+          <span>Hello {!user ? "Guest" : user.email}</span>
+          <span>{user ? "Sign Out" : "Sign In"}</span> */}
         Login
+        {/* </div> */}
       </Button>
 
       <Modal show={show} onHide={handleClose} size="lg">
