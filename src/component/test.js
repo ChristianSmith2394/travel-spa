@@ -1,5 +1,5 @@
 import React from "react";
-import { GoogleMap, useLoadScript, MarkerF, Polyline } from "@react-google-maps/api";
+import { GoogleMap, useLoadScript, MarkerF, PolylineF } from "@react-google-maps/api";
 import mapStyles from "./mapStyles.json";
 import { red } from "@mui/material/colors";
 
@@ -49,7 +49,7 @@ function Map() {
         <div>
             <GoogleMap
                 mapContainerStyle={mapContainerStyle}
-                zoom={window.innerWidth < 800 ? 2 : window.innerWidth > 800 && window.innerWidth < 1600 ? 3 : 4}
+                zoom={window.innerWidth < 800 ? 2 : window.innerWidth > 800 && window.innerWidth < 1400 ? 3 : 4}
 
                 center={center}
                 options={options}
@@ -62,29 +62,27 @@ function Map() {
                 ))}
 
                 /* draw a red line that follows the curve of the earth between the coordinates in coords */ 
-                <Polyline
+    
+                <PolylineF
                     path={coords}
                     options={{
-   
-                              geodesic: true,
-                              strokeOpacity: 0,
+                        geodesic: false, // set to true to draw a curved line -- need to adjust zoom level to account for this
+                        strokeOpacity: 0,
+                        strokeWeight: 2,
+                        strokeColor: red[500],
+                        icons: [
+                          {
+                            icon: {
+                              path: 'M 0,0 0,1',
+                              strokeOpacity: 1,
                               strokeWeight: 2,
-                              strokeColor: red[500],
-                              icons: [
-                                {
-                                  icon: {
-                                    path: 'M 0,0 0,1',
-                                    strokeOpacity: 1,
-                                    strokeWeight: 2,
-                                    scale: 3,
-                                  },
-                                  repeat: '10px',
-                                },
-                              ],
-
+                              scale: 3,
+                            },
+                            repeat: '10px',
+                          },
+                        ],
                     }}
                 />
-    
             </GoogleMap>
         </div>
     );
