@@ -18,7 +18,7 @@ function getCoords(airportCode) {
 }
 
 const code1 = "MSP";
-const code2 = "LAX";
+const code2 = "EWR";
 
 const coords = [getCoords(code1), getCoords(code2)];
 console.log("Auto Coordinates",coords);
