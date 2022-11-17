@@ -2,6 +2,7 @@ import React from "react";
 import { GoogleMap, useLoadScript, MarkerF, PolylineF } from "@react-google-maps/api";
 import mapStyles from "./mapStyles.json";
 import { red } from "@mui/material/colors";
+import items from "../data/airports.json";
 
 const mapContainerStyle = {
   width: "100vw",
@@ -60,9 +61,7 @@ function Map() {
                         position={{ lat: coord.lat, lng: coord.lng }}
                     />
                 ))}
-
-                /* draw a red line that follows the curve of the earth between the coordinates in coords */ 
-    
+   
                 <PolylineF
                     path={coords}
                     options={{
