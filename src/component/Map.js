@@ -17,16 +17,13 @@ function getCoords(airportCode) {
   }
 }
 
-const code1 = "MSP";
-const code2 = "EWR";
+const departCode = "MSP";
+const arriveCode = "EWR";
 
-const coords = [getCoords(code1), getCoords(code2)];
-console.log("Auto Coordinates",coords);
+// const coords = [getCoords(departCode), getCoords(arriveCode)];
+// console.log("Auto Coordinates",coords);
 
-const center = ({
-    lat: (coords[0].lat + coords[1].lat) / 2,
-    lng: (coords[0].lng + coords[1].lng) / 2
-});
+
 
 
 const options = {
@@ -40,13 +37,20 @@ const options = {
 
     };
 
-function Map() {
+function Map({ departCode, arriveCode }) {
     const { isLoaded, loadError } = useLoadScript({
         googleMapsApiKey: "AIzaSyARgEWVzXfMVGVtrXFmZHJwdL5yqxYFL_k",
     });
 
     if (loadError) return "Error loading maps";
     if (!isLoaded) return "Loading Maps";
+
+    const coords = [getCoords(departCode), getCoords(arriveCode)];
+
+      const center = ({
+        lat: (coords[0].lat + coords[1].lat) / 2,
+        lng: (coords[0].lng + coords[1].lng) / 2
+    });
 
     return (
         <div>

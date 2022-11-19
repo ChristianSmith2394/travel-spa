@@ -11,7 +11,7 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import items from "../data/airports.json";
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
 
-function TripForm() {
+function TripForm({ departCode, arriveCode, setDepartCode, setArriveCode }) {
   const [alignment, setAlignment] = React.useState("round-trip");
 
   const [departDate, setDepartDate] = React.useState([null, null]);
@@ -22,23 +22,31 @@ function TripForm() {
     // onSearch will have the first callback parameter as
     // the string searched. For the second, the results.
     console.log(string, results);
-    return string, results;
+    return (string, results);
   };
 
   const handleOnHover = (result) => {
     // the item hovered
-    console.log(result);
+    // console.log(result);
     return result;
   };
 
-  const handleOnSelect = (item) => {
+  const handleOnSelectDepart = (item) => {
     // the item selected
-    console.log(item);
-    return item;
+    setDepartCode(item.code);
+    console.log(item.code);
+    // return item;
+  };
+  
+  const handleOnSelectArrive = (item) => {
+    // the item selected
+    setArriveCode(item.code);
+    console.log(item.code);
+    // return item;
   };
 
   const handleOnFocus = () => {
-    console.log("Focused");
+    // console.log("Focused");
   };
 
   const formatResult = (item) => {
@@ -90,7 +98,7 @@ function TripForm() {
                 fuseOptions={{ keys: ["code", "name"] }}
                 onSearch={handleOnSearch}
                 onHover={handleOnHover}
-                onSelect={handleOnSelect}
+                onSelect={handleOnSelectDepart}
                 onFocus={handleOnFocus}
                 placeholder="Departure"
                 autoFocus
@@ -104,7 +112,7 @@ function TripForm() {
                 fuseOptions={{ keys: ["code", "name"] }}
                 onSearch={handleOnSearch}
                 onHover={handleOnHover}
-                onSelect={handleOnSelect}
+                onSelect={handleOnSelectArrive}
                 onFocus={handleOnFocus}
                 placeholder="Destination"
                 autoFocus
