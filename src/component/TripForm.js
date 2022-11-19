@@ -10,15 +10,27 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import items from "../data/airports.json";
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
+import moment from 'moment';
 
-function TripForm({ departDate, returnDate, passengers, setDepartCode, setArriveCode, setDepartDate, setReturnDate, setPassengers }) {
+function TripForm({
+  departCode,
+  arriveCode,
+  departDate,
+  returnDate,
+  passengers,
+  setDepartCode,
+  setArriveCode,
+  setDepartDate,
+  setReturnDate,
+  setPassengers,
+}) {
   const [alignment, setAlignment] = React.useState("round-trip");
 
   const handleOnSearch = (string, results) => {
     // onSearch will have the first callback parameter as
     // the string searched. For the second, the results.
     console.log(string, results);
-    return (string, results);
+    return string, results;
   };
 
   const handleOnHover = (result) => {
@@ -33,7 +45,7 @@ function TripForm({ departDate, returnDate, passengers, setDepartCode, setArrive
     console.log(item.code);
     // return item;
   };
-  
+
   const handleOnSelectArrive = (item) => {
     // the item selected
     setArriveCode(item.code);
@@ -44,6 +56,25 @@ function TripForm({ departDate, returnDate, passengers, setDepartCode, setArrive
   const handleOnFocus = () => {
     // console.log("Focused");
   };
+
+  const formatDate = (date) => {
+    // wihout moment.js
+    const day = date["$D"];
+    const month = date["$M"] + 1;
+    const year = date["$y"];
+    return `${year}-${month}-${day}`;
+  };
+
+  const handleOnSubmit = () => {
+
+    console.log("departCode: " + departCode);
+    console.log("arriveCode: " + arriveCode);
+    console.log("passengers: " + passengers);
+    console.log(departDate);
+    console.log(returnDate);
+    
+  };
+
 
   const formatResult = (item) => {
     return (
@@ -148,7 +179,7 @@ function TripForm({ departDate, returnDate, passengers, setDepartCode, setArrive
                   className="col-6 px-2"
                   label="Departure Date"
                   onChange={(newValue) => {
-                    setDepartDate(newValue);
+                    setDepartDate(formatDate(newValue));
                   }}
                   value={departDate}
                   renderInput={(params) => <TextField {...params} />}
@@ -162,7 +193,7 @@ function TripForm({ departDate, returnDate, passengers, setDepartCode, setArrive
                     label="Departure Date"
                     value={departDate}
                     onChange={(newValue) => {
-                      setDepartDate(newValue);
+                      setDepartDate(formatDate(newValue));
                     }}
                     renderInput={(params) => <TextField {...params} />}
                   />
@@ -172,7 +203,7 @@ function TripForm({ departDate, returnDate, passengers, setDepartCode, setArrive
                     className="col px-2"
                     label="Return Date"
                     onChange={(newValue) => {
-                      setReturnDate(newValue);
+                      setReturnDate(formatDate(newValue));
                     }}
                     value={returnDate}
                     renderInput={(params) => <TextField {...params} />}
@@ -183,9 +214,13 @@ function TripForm({ departDate, returnDate, passengers, setDepartCode, setArrive
           </div>
           <div className="row p-3">
             <div className="col"></div>
-              <button type="submit" className="col-6 btn btn-ckt">
-                Search
-              </button>
+            <button
+              type="submit"
+              className="col-6 btn btn-ckt"
+              onClick={handleOnSubmit}
+            >
+              Search
+            </button>
             <div className="col"></div>
           </div>
         </div>
