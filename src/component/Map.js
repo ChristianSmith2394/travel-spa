@@ -17,15 +17,6 @@ function getCoords(airportCode) {
   }
 }
 
-const departCode = "MSP";
-const arriveCode = "EWR";
-
-// const coords = [getCoords(departCode), getCoords(arriveCode)];
-// console.log("Auto Coordinates",coords);
-
-
-
-
 const options = {
     fullscreenControl: false,
     streetViewControl: false,

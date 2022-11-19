@@ -3,6 +3,7 @@ import Header from "../component/Header";
 import Footer from "../component/Footer";
 import TripForm from "../component/TripForm";
 import Map from "../component/Map";
+import Results from "../component/Results";
 
 import "./HomePage.css";
 
@@ -25,6 +26,7 @@ function HomePage() {
         setDepartCode={setDepartCode}
         setArriveCode={setArriveCode}
       />
+      <Results />
       <Footer />
     </div>
   );

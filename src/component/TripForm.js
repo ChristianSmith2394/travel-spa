@@ -13,9 +13,7 @@ import { ReactSearchAutocomplete } from "react-search-autocomplete";
 
 function TripForm({ departCode, arriveCode, setDepartCode, setArriveCode }) {
   const [alignment, setAlignment] = React.useState("round-trip");
-
   const [departDate, setDepartDate] = React.useState([null, null]);
-
   const [returnDate, setReturnDate] = React.useState([null, null]);
 
   const handleOnSearch = (string, results) => {
