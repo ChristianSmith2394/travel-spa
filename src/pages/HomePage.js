@@ -7,8 +7,8 @@ import Map from "../component/Map";
 import "./HomePage.css";
 
 function HomePage() {
-  const [departCode, setDepartCode] = React.useState("AAA");
-  const [arriveCode, setArriveCode] = React.useState("AAA");
+  const [departCode, setDepartCode] = React.useState("MSP");
+  const [arriveCode, setArriveCode] = React.useState("ACY");
 
   return (
     <div className="homepage">
