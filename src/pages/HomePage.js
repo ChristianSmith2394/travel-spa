@@ -6,27 +6,39 @@ import Map from "../component/Map";
 import Results from "../component/Results";
 
 import "./HomePage.css";
+import { parseNonNullablePickerDate } from "@mui/x-date-pickers/internals";
 
 function HomePage() {
   const [departCode, setDepartCode] = React.useState("MSP");
   const [arriveCode, setArriveCode] = React.useState("ACY");
+  const [departDate, setDepartDate] = React.useState(null);
+  const [returnDate, setReturnDate] = React.useState(null);
+  const [passengers, setPassengers] = React.useState(null);
 
   return (
     <div className="homepage">
       <Header />
-      <TripForm 
-        departCode={departCode} 
-        arriveCode={arriveCode}
+      <TripForm
+        departDate={departDate} 
+        returnDate={returnDate}
+        passengers={passengers}
         setDepartCode={setDepartCode}
         setArriveCode={setArriveCode}
+        setDepartDate={setDepartDate}
+        setReturnDate={setReturnDate}
+        setPassengers={setPassengers}
         />
       <Map  
         departCode={departCode} 
         arriveCode={arriveCode}
-        setDepartCode={setDepartCode}
-        setArriveCode={setArriveCode}
-      />
-      <Results />
+        />
+      <Results         
+        departCode={departCode} 
+        arriveCode={arriveCode}
+        departDate={departDate} 
+        returnDate={returnDate}
+        passengers={passengers}
+        />
       <Footer />
     </div>
   );

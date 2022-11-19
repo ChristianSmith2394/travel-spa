@@ -11,10 +11,8 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import items from "../data/airports.json";
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
 
-function TripForm({ departCode, arriveCode, setDepartCode, setArriveCode }) {
+function TripForm({ departDate, returnDate, passengers, setDepartCode, setArriveCode, setDepartDate, setReturnDate, setPassengers }) {
   const [alignment, setAlignment] = React.useState("round-trip");
-  const [departDate, setDepartDate] = React.useState([null, null]);
-  const [returnDate, setReturnDate] = React.useState([null, null]);
 
   const handleOnSearch = (string, results) => {
     // onSearch will have the first callback parameter as
@@ -138,6 +136,8 @@ function TripForm({ departCode, arriveCode, setDepartCode, setArriveCode }) {
                   lineColor: "rgb(232, 234, 237)",
                   placeholderColor: "grey",
                 }}
+                value={passengers}
+                onChange={(e) => setPassengers(e.target.value)}
               />
             </div>
           </div>
@@ -147,10 +147,10 @@ function TripForm({ departCode, arriveCode, setDepartCode, setArriveCode }) {
                 <DatePicker
                   className="col-6 px-2"
                   label="Departure Date"
-                  value={departDate}
                   onChange={(newValue) => {
                     setDepartDate(newValue);
                   }}
+                  value={departDate}
                   renderInput={(params) => <TextField {...params} />}
                 />
               </LocalizationProvider>
@@ -171,10 +171,10 @@ function TripForm({ departCode, arriveCode, setDepartCode, setArriveCode }) {
                   <DatePicker
                     className="col px-2"
                     label="Return Date"
-                    value={returnDate}
                     onChange={(newValue) => {
                       setReturnDate(newValue);
                     }}
+                    value={returnDate}
                     renderInput={(params) => <TextField {...params} />}
                   />
                 </LocalizationProvider>
