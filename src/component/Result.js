@@ -3,6 +3,7 @@ import "./Result.css";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Accordion from "react-bootstrap/Accordion";
 import sampleResults from "../data/sampleResults.json";
 
 function Result(departCode, arriveCode, departDate, returnDate, passengers) {
@@ -25,25 +26,43 @@ function Result(departCode, arriveCode, departDate, returnDate, passengers) {
   //     setResults(result);
   //     });
 
-
   return sampleResults.map((result) => (
-    <Row>
+    <Row className="result-card mx-auto">
       <Col>
-        <Card>
+        <Card className="result">
           <Card.Body>
             <Card.Title>{result.airline}</Card.Title>
             <Card.Subtitle className="mb-2 text-muted">
               {result.departCode} to {result.arriveCode}
             </Card.Subtitle>
             <Card.Text>
-              Depart: {result.departDate} {result.departTimeD} -{" "}
+              Departure Flight: {result.departDate} {result.departTimeD}
               {result.arriveTimeD}
             </Card.Text>
+          </Card.Body>
+        </Card>
+      </Col>
+      <Col>
+        <Card className="result">
+          <Card.Body>
+            <Card.Title>{result.airline}</Card.Title>
+            <Card.Subtitle className="mb-2 text-muted">
+               {result.arriveCode} to {result.departCode}
+            </Card.Subtitle>
             <Card.Text>
-              Return: {result.returnDate} {result.returnTimeR} -{" "}
+              Return Flight: {result.returnDate} {result.returnTimeR}
               {result.arriveTimeR}
             </Card.Text>
-            <Card.Text>Price: {result.price}</Card.Text>
+          </Card.Body>
+        </Card>
+      </Col>
+      <Col md={2}>
+        <Card className="result">
+          <Card.Body>
+            <Card.Title>Price</Card.Title>
+            <Card.Subtitle className="mb-2 text-muted">
+              {result.price}
+            </Card.Subtitle>
           </Card.Body>
         </Card>
       </Col>

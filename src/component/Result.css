@@ -1,26 +1,20 @@
 .result {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
     max-height: none;
-    width: 100%;
+    /* width: 50%; */
     align-items: center;
+    background-color: rgba(0, 60, 59, .0);
+    border: 0px;
 }
 
 .result-card {
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     border: 2px solid rgb(0, 60, 59);
-    width: 40%;
+    width: 80%;
     height: 15vh;
     margin-top: 30px;
     border-radius: 25px;
     background-color: rgba(0, 60, 59, .5);
-}
-
-.result-card h6 {
-    padding-left: 30px;
-    color: white
 }
