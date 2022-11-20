@@ -5,6 +5,11 @@
     max-height: none;
     width: 100%;
     align-items: center;
+    background-image: url('../assets/port5.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center calc(50% - 150px); 
 }
 
 .result-card {
