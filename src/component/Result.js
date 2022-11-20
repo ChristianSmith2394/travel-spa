@@ -70,7 +70,7 @@ const handleOnClick = (result) => {
             <Card.Subtitle className="mb-2 text-muted">
               {result.price}
             </Card.Subtitle>
-            <Button variant="btn btn-ckt" onClick={handleOnClick(result)}>Select</Button>
+            <Button variant="btn btn-ckt" onClick={handleOnClick(result)}>Details</Button>
           </Card.Body>
         </Card>
       </Col>
