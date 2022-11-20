@@ -1,0 +1,158 @@
+{
+    "type": "flight-offer",
+    "id": "1",
+    "source": "GDS",
+    "instantTicketingRequired": "False",
+    "nonHomogeneous": "False",
+    "oneWay": "False",
+    "lastTicketingDate": "2022-11-14",
+    "numberOfBookableSeats": 4,
+    "itineraries": [
+        {
+            "duration": "PT41H35M",
+            "segments": [
+                {
+                    "departure": {
+                        "iataCode": "MSP",
+                        "terminal": "2",
+                        "at": "2022-11-15T17:35:00"
+                    },
+                    "arrival": {
+                        "iataCode": "BOS",
+                        "terminal": "C",
+                        "at": "2022-11-15T21:23:00"
+                    },
+                    "carrierCode": "TP",
+                    "number": "4334",
+                    "aircraft": {
+                        "code": "223"
+                    },
+                    "operating": {
+                        "carrierCode": "B6"
+                    },
+                    "duration": "PT2H48M",
+                    "id": "132",
+                    "numberOfStops": 0,
+                    "blacklistedInEU": "False"
+                },
+                {
+                    "departure": {
+                        "iataCode": "BOS",
+                        "terminal": "C",
+                        "at": "2022-11-16T18:10:00"
+                    },
+                    "arrival": {
+                        "iataCode": "LIS",
+                        "terminal": "1",
+                        "at": "2022-11-17T05:35:00"
+                    },
+                    "carrierCode": "TP",
+                    "number": "218",
+                    "aircraft": {
+                        "code": "32Q"
+                    },
+                    "operating": {
+                        "carrierCode": "TP"
+                    },
+                    "duration": "PT6H25M",
+                    "id": "133",
+                    "numberOfStops": 0,
+                    "blacklistedInEU": "False"
+                },
+                {
+                    "departure": {
+                        "iataCode": "LIS",
+                        "terminal": "1",
+                        "at": "2022-11-17T13:45:00"
+                    },
+                    "arrival": {
+                        "iataCode": "PRG",
+                        "terminal": "2",
+                        "at": "2022-11-17T18:10:00"
+                    },
+                    "carrierCode": "TP",
+                    "number": "1246",
+                    "aircraft": {
+                        "code": "32N"
+                    },
+                    "operating": {
+                        "carrierCode": "TP"
+                    },
+                    "duration": "PT3H25M",
+                    "id": "134",
+                    "numberOfStops": 0,
+                    "blacklistedInEU": "False"
+                }
+            ]
+        }
+    ],
+    "price": {
+        "currency": "EUR",
+        "total": "507.03",
+        "base": "305.00",
+        "fees": [
+            {
+                "amount": "0.00",
+                "type": "SUPPLIER"
+            },
+            {
+                "amount": "0.00",
+                "type": "TICKETING"
+            }
+        ],
+        "grandTotal": "507.03"
+    },
+    "pricingOptions": {
+        "fareType": [
+            "PUBLISHED"
+        ],
+        "includedCheckedBagsOnly": "False"
+    },
+    "validatingAirlineCodes": [
+        "TP"
+    ],
+    "travelerPricings": [
+        {
+            "travelerId": "1",
+            "fareOption": "STANDARD",
+            "travelerType": "ADULT",
+            "price": {
+                "currency": "EUR",
+                "total": "507.03",
+                "base": "305.00"
+            },
+            "fareDetailsBySegment": [
+                {
+                    "segmentId": "132",
+                    "cabin": "ECONOMY",
+                    "fareBasis": "UUSDSI0E",
+                    "brandedFare": "DISCOUNT",
+                    "class": "U",
+                    "includedCheckedBags": {
+                        "quantity": 0
+                    }
+                },
+                {
+                    "segmentId": "133",
+                    "cabin": "ECONOMY",
+                    "fareBasis": "UUSDSI0E",
+                    "brandedFare": "DISCOUNT",
+                    "class": "U",
+                    "includedCheckedBags": {
+                        "quantity": 0
+                    }
+                },
+                {
+                    "segmentId": "134",
+                    "cabin": "ECONOMY",
+                    "fareBasis": "UUSDSI0E",
+                    "brandedFare": "DISCOUNT",
+                    "class": "U",
+                    "includedCheckedBags": {
+                        "quantity": 0
+                    }
+                }
+            ]
+        }
+    ]
+}
