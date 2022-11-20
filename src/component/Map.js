@@ -11,7 +11,7 @@ import items from "../data/airports.json";
 
 const mapContainerStyle = {
   width: "100vw",
-  height: "25vh",
+  height: "40vh",
 };
 
 function getCoords(airportCode) {
