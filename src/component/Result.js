@@ -1,11 +1,11 @@
 import React from "react";
 
 function Result(departCode, arriveCode, departDate, returnDate, passengers) {
-  const [results, setResults] = React.useState([]);
+  // const [results, setResults] = React.useState([]);
 
-  console.log("departCode: " + departCode);
-  console.log("arriveCode: " + arriveCode);
-  console.log("passengers: " + passengers);
+  // console.log("departCode: " + departCode);
+  // console.log("arriveCode: " + arriveCode);
+  // console.log("passengers: " + passengers);
 
   //   console.log(url);
 
@@ -21,9 +21,10 @@ function Result(departCode, arriveCode, departDate, returnDate, passengers) {
   //     });
 
   return (
-    <div className="results">
+    <div className="result">
+      <h1>Results go here!</h1>
       <div className="result-card">
-        <h1>Results go here!</h1>
+        <p>Airline:</p>
         <p>From:</p>
         <p>To:</p>
         <p>Price:</p>
