@@ -3,8 +3,9 @@ import "./Result.css";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Accordion from "react-bootstrap/Accordion";
+import Button from "react-bootstrap/Button";
 import sampleResults from "../data/sampleResults.json";
+import Map from "./Map";
 
 function Result(departCode, arriveCode, departDate, returnDate, passengers) {
   // const [results, setResults] = React.useState([]);
@@ -25,6 +26,12 @@ function Result(departCode, arriveCode, departDate, returnDate, passengers) {
   //     console.log(result);
   //     setResults(result);
   //     });
+
+const handleOnClick = (result) => {
+    console.log(result);
+
+    <Map departCode={result.departCode} arriveCode={result.arriveCode} />;
+  };
 
   return sampleResults.map((result) => (
     <Row className="result-card mx-auto">
@@ -63,6 +70,7 @@ function Result(departCode, arriveCode, departDate, returnDate, passengers) {
             <Card.Subtitle className="mb-2 text-muted">
               {result.price}
             </Card.Subtitle>
+            <Button variant="btn btn-ckt" onClick={handleOnClick(result)}>Select</Button>
           </Card.Body>
         </Card>
       </Col>
