@@ -22,7 +22,12 @@ function Result(departCode, arriveCode, departDate, returnDate, passengers) {
 
   return (
     <div className="results">
-      <h1>Results go here!</h1>
+      <div className="result-card">
+        <h1>Results go here!</h1>
+        <p>From:</p>
+        <p>To:</p>
+        <p>Price:</p>
+      </div>
       {/* <ul>
         {results.map((result) => (
           <li key={result.id}>

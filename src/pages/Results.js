@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../component/Header";
 import Footer from "../component/Footer";
-import Map from "../component/Map";
+// import Map from "../component/Map";
 import Result from "../component/Result";
 
 function Results() {

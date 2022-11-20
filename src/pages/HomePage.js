@@ -3,7 +3,7 @@ import Header from "../component/Header";
 import Footer from "../component/Footer";
 import TripForm from "../component/TripForm";
 import Map from "../component/Map";
-// import Results from "../component/Results";
+// import Result from "../component/Result";
 
 import "./HomePage.css";
 
@@ -30,7 +30,7 @@ function HomePage() {
         setPassengers={setPassengers}
       />
       <Map departCode={departCode} arriveCode={arriveCode} />
-      {/* <Results         
+      {/* <Result         
         departCode={departCode} 
         arriveCode={arriveCode}
         departDate={departDate} 

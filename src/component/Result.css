@@ -1,4 +1,15 @@
 .results {
+    display: flex;
     background-color: azure;
     height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid red;
+}
+
+.result-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
