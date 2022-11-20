@@ -8,6 +8,15 @@ header {
     /* padding-top: 10px; */
 }
 
+img {
+    height: 6vh;
+    width: auto;
+}
+
+.navbar {
+    height: 8vh;
+}
+
 .nav-link {
     text-decoration: none;
     font-weight: 600;

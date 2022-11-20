@@ -14,11 +14,12 @@ function InfoModal() {
   //   }
   // };
   const [show, setShow] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   // const history = useNavigate();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+
   const signIn = (e) => {
     e.preventDefault();
 

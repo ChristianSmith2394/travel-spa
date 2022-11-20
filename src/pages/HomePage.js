@@ -18,9 +18,9 @@ function HomePage() {
     <div className="homepage">
       <Header />
       <TripForm
-        departCode={departCode} 
+        departCode={departCode}
         arriveCode={arriveCode}
-        departDate={departDate} 
+        departDate={departDate}
         returnDate={returnDate}
         passengers={passengers}
         setDepartCode={setDepartCode}
@@ -28,11 +28,8 @@ function HomePage() {
         setDepartDate={setDepartDate}
         setReturnDate={setReturnDate}
         setPassengers={setPassengers}
-        />
-      <Map  
-        departCode={departCode} 
-        arriveCode={arriveCode}
-        />
+      />
+      <Map departCode={departCode} arriveCode={arriveCode} />
       {/* <Results         
         departCode={departCode} 
         arriveCode={arriveCode}
