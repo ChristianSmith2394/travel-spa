@@ -25,22 +25,28 @@ function Result(departCode, arriveCode, departDate, returnDate, passengers) {
     <div className="result">
       <h1>Your flight results are in!</h1>
       <div className="result-card">
-        <p>Airline:</p>
-        <p>From:</p>
-        <p>To:</p>
-        <p>Price:</p>
+        <h6>Airline:</h6>
+        <h6>From:</h6>
+        <h6>To:</h6>
+        <h6>Price:</h6>
       </div>
       <div className="result-card">
-        <p>Airline:</p>
-        <p>From:</p>
-        <p>To:</p>
-        <p>Price:</p>
+        <h6>Airline:</h6>
+        <h6>From:</h6>
+        <h6>To:</h6>
+        <h6>Price:</h6>
       </div>
       <div className="result-card">
-        <p>Airline:</p>
-        <p>From:</p>
-        <p>To:</p>
-        <p>Price:</p>
+        <h6>Airline:</h6>
+        <h6>From:</h6>
+        <h6>To:</h6>
+        <h6>Price:</h6>
+      </div>
+      <div className="result-card">
+        <h6>Airline:</h6>
+        <h6>From:</h6>
+        <h6>To:</h6>
+        <h6>Price:</h6>
       </div>
       {/* <ul>
         {results.map((result) => (
