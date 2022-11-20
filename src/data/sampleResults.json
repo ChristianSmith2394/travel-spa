@@ -1,0 +1,50 @@
+[
+    {
+        "airline": "Delta",
+        "departCode": "MSP",
+        "departDate": "2021-11-01",
+        "departTimeD": "10:00",
+        "arriveTimeD": "12:00",
+        "arriveCode": "ACY",
+        "returnDate": "2021-11-02",
+        "returnTimeR": "10:00",
+        "arriveTimeR": "12:00",
+        "price": "175"
+    },
+    {
+        "airline": "Southwest",
+        "departCode": "MSP",
+        "departDate": "2021-11-01",
+        "departTimeD": "10:00",
+        "arriveTimeD": "12:00",
+        "arriveCode": "ACY",
+        "returnDate": "2021-11-02",
+        "returnTimeR": "10:00",
+        "arriveTimeR": "12:00",
+        "price": "80"
+    },
+    {
+        "airline": "Air Canada",
+        "departCode": "MSP",
+        "departDate": "2021-11-01",
+        "departTimeD": "10:00",
+        "arriveTimeD": "12:00",
+        "arriveCode": "ACY",
+        "returnDate": "2021-11-02",
+        "returnTimeR": "10:00",
+        "arriveTimeR": "12:00",
+        "price": "300"
+    },
+    {
+        "airline": "KLM",
+        "departCode": "MSP",
+        "departDate": "2021-11-01",
+        "departTimeD": "10:00",
+        "arriveTimeD": "12:00",
+        "arriveCode": "ACY",
+        "returnDate": "2021-11-02",
+        "returnTimeR": "10:00",
+        "arriveTimeR": "12:00",
+        "price": "125"
+    }
+]

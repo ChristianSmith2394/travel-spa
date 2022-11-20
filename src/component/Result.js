@@ -1,5 +1,9 @@
 import React from "react";
 import "./Result.css";
+import Card from "react-bootstrap/Card";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import sampleResults from "../data/sampleResults.json";
 
 function Result(departCode, arriveCode, departDate, returnDate, passengers) {
   // const [results, setResults] = React.useState([]);
@@ -21,42 +25,30 @@ function Result(departCode, arriveCode, departDate, returnDate, passengers) {
   //     setResults(result);
   //     });
 
-  return (
-    <div className="result">
-      <h1>Your flight results are in!</h1>
-      <div className="result-card">
-        <h6>Airline:</h6>
-        <h6>From:</h6>
-        <h6>To:</h6>
-        <h6>Price:</h6>
-      </div>
-      <div className="result-card">
-        <h6>Airline:</h6>
-        <h6>From:</h6>
-        <h6>To:</h6>
-        <h6>Price:</h6>
-      </div>
-      <div className="result-card">
-        <h6>Airline:</h6>
-        <h6>From:</h6>
-        <h6>To:</h6>
-        <h6>Price:</h6>
-      </div>
-      <div className="result-card">
-        <h6>Airline:</h6>
-        <h6>From:</h6>
-        <h6>To:</h6>
-        <h6>Price:</h6>
-      </div>
-      {/* <ul>
-        {results.map((result) => (
-          <li key={result.id}>
-            {result.name} {result.price}
-          </li>
-        ))}
-      </ul> */}
-    </div>
-  );
+
+  return sampleResults.map((result) => (
+    <Row>
+      <Col>
+        <Card>
+          <Card.Body>
+            <Card.Title>{result.airline}</Card.Title>
+            <Card.Subtitle className="mb-2 text-muted">
+              {result.departCode} to {result.arriveCode}
+            </Card.Subtitle>
+            <Card.Text>
+              Depart: {result.departDate} {result.departTimeD} -{" "}
+              {result.arriveTimeD}
+            </Card.Text>
+            <Card.Text>
+              Return: {result.returnDate} {result.returnTimeR} -{" "}
+              {result.arriveTimeR}
+            </Card.Text>
+            <Card.Text>Price: {result.price}</Card.Text>
+          </Card.Body>
+        </Card>
+      </Col>
+    </Row>
+  ));
 }
 
 export default Result;
