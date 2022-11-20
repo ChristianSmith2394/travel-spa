@@ -3,7 +3,7 @@ import Header from "../component/Header";
 import Footer from "../component/Footer";
 import TripForm from "../component/TripForm";
 import Map from "../component/Map";
-import Results from "../component/Results";
+// import Result from "../component/Result";
 
 import "./HomePage.css";
 
@@ -18,9 +18,9 @@ function HomePage() {
     <div className="homepage">
       <Header />
       <TripForm
-        departCode={departCode} 
+        departCode={departCode}
         arriveCode={arriveCode}
-        departDate={departDate} 
+        departDate={departDate}
         returnDate={returnDate}
         passengers={passengers}
         setDepartCode={setDepartCode}
@@ -28,12 +28,9 @@ function HomePage() {
         setDepartDate={setDepartDate}
         setReturnDate={setReturnDate}
         setPassengers={setPassengers}
-        />
-      <Map  
-        departCode={departCode} 
-        arriveCode={arriveCode}
-        />
-      {/* <Results         
+      />
+      <Map departCode={departCode} arriveCode={arriveCode} />
+      {/* <Result         
         departCode={departCode} 
         arriveCode={arriveCode}
         departDate={departDate} 

@@ -10,7 +10,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import items from "../data/airports.json";
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
-import moment from 'moment';
+// import moment from "moment";
 
 function TripForm({
   departCode,
@@ -58,7 +58,7 @@ function TripForm({
   };
 
   const formatDate = (date) => {
-    // wihout moment.js
+    // without moment.js
     const day = date["$D"];
     const month = date["$M"] + 1;
     const year = date["$y"];
@@ -66,15 +66,12 @@ function TripForm({
   };
 
   const handleOnSubmit = () => {
-
     console.log("departCode: " + departCode);
     console.log("arriveCode: " + arriveCode);
     console.log("passengers: " + passengers);
     console.log(departDate);
     console.log(returnDate);
-    
   };
-
 
   const formatResult = (item) => {
     return (
@@ -131,6 +128,7 @@ function TripForm({
                 autoFocus
                 formatResult={formatResult}
                 styling={{ zIndex: 2 }}
+                required
               />
             </div>
             <div className="col px-2">
@@ -145,6 +143,7 @@ function TripForm({
                 autoFocus
                 formatResult={formatResult}
                 styling={{ zIndex: 2 }}
+                required
               />
             </div>
             <div className="col px-2">
@@ -183,6 +182,7 @@ function TripForm({
                   }}
                   value={departDate}
                   renderInput={(params) => <TextField {...params} />}
+                  required
                 />
               </LocalizationProvider>
             ) : (
@@ -196,6 +196,7 @@ function TripForm({
                       setDepartDate(formatDate(newValue));
                     }}
                     renderInput={(params) => <TextField {...params} />}
+                    required
                   />
                 </LocalizationProvider>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -207,6 +208,7 @@ function TripForm({
                     }}
                     value={returnDate}
                     renderInput={(params) => <TextField {...params} />}
+                    required
                   />
                 </LocalizationProvider>
               </>
