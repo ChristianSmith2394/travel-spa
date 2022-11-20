@@ -1,4 +1,5 @@
 import React from "react";
+import "./Result.css";
 
 function Result(departCode, arriveCode, departDate, returnDate, passengers) {
   // const [results, setResults] = React.useState([]);
@@ -22,7 +23,19 @@ function Result(departCode, arriveCode, departDate, returnDate, passengers) {
 
   return (
     <div className="result">
-      <h1>Results go here!</h1>
+      <h1>Your flight results are in!</h1>
+      <div className="result-card">
+        <p>Airline:</p>
+        <p>From:</p>
+        <p>To:</p>
+        <p>Price:</p>
+      </div>
+      <div className="result-card">
+        <p>Airline:</p>
+        <p>From:</p>
+        <p>To:</p>
+        <p>Price:</p>
+      </div>
       <div className="result-card">
         <p>Airline:</p>
         <p>From:</p>

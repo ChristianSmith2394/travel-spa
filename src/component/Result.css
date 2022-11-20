@@ -1,18 +1,24 @@
 .result {
     display: flex;
-    background-color: azure;
-    height: 100%;
+    flex-direction: column;
+    height: 100vh;
     width: 100%;
     align-items: center;
-    justify-content: center;
     border: 2px solid blue;
 
 }
 
 .result-card {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
     border: 2px solid red;
+    width: 50%;
+    margin-top: 30px;
+}
 
+.result-card p {
+    padding-left: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
