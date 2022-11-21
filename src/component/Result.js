@@ -69,8 +69,8 @@ function Result(departCode, arriveCode, departDate, returnDate, passengers) {
         <Card className="result">
           <Card.Body>
             <Card.Title className="text-center">
-              <FontAwesomeIcon icon={faArrowRightToBracket} />{" "}
-              {result.airlineDeparture}
+              {result.airlineDeparture}{" "}
+              <FontAwesomeIcon icon={faArrowRightToBracket} />
             </Card.Title>
             <Card.Subtitle className="mb-2 text-muted">
               {/* Can add Subtitle if you want */}
@@ -116,7 +116,7 @@ function Result(departCode, arriveCode, departDate, returnDate, passengers) {
         <Card className="result">
           <Card.Body>
             <Card.Title className="text-center">
-              <FontAwesomeIcon icon={faArrowRightToBracket} />{" "}
+              <FontAwesomeIcon icon={faArrowRightFromBracket} />{" "}
               {result.airlineReturn}
             </Card.Title>
             <Card.Subtitle className="mb-2 text-muted">
