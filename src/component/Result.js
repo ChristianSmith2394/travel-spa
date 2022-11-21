@@ -58,7 +58,6 @@ function FlightInfo(result) {
                   </Accordion.Body>
                 </Accordion.Item>
               </Accordion>
-
           </Container>
         </Modal.Body>
         <Modal.Footer>
