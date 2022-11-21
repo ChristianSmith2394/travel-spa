@@ -7,6 +7,11 @@ import sampleResults from "../data/sampleResults.json";
 import Map from "./Map";
 import { Modal, Button, Form, Container } from "react-bootstrap";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRightToBracket, faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+
+
+
 function FlightInfo(result) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -55,12 +60,13 @@ function Result(departCode, arriveCode, departDate, returnDate, passengers) {
       <Col>
         <Card className="result">
           <Card.Body>
-            <Card.Title>{result.airline}</Card.Title>
+            <Card.Title><FontAwesomeIcon icon={faArrowRightToBracket} /> {result.airline}</Card.Title> 
             <Card.Subtitle className="mb-2 text-muted">
               {result.departCode} to {result.arriveCode}
             </Card.Subtitle>
             <Card.Text>
-              Departure Flight: {result.departDate} {result.departTimeD}
+             
+              {result.departDate} {result.departTimeD}
               {result.arriveTimeD}
             </Card.Text>
           </Card.Body>
@@ -69,12 +75,13 @@ function Result(departCode, arriveCode, departDate, returnDate, passengers) {
       <Col>
         <Card className="result">
           <Card.Body>
-            <Card.Title>{result.airline}</Card.Title>
+            <Card.Title><FontAwesomeIcon icon={faArrowRightFromBracket} /> {result.airline}</Card.Title>
+            
             <Card.Subtitle className="mb-2 text-muted">
                {result.arriveCode} to {result.departCode}
             </Card.Subtitle>
             <Card.Text>
-              Return Flight: {result.returnDate} {result.returnTimeR}
+               {result.returnDate} {result.returnTimeR}
               {result.arriveTimeR}
             </Card.Text>
           </Card.Body>
