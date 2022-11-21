@@ -15,6 +15,8 @@ import {
   faPlaneArrival,
   faCalendar,
   faClock,
+  faMoneyBill1,
+  faDollarSign
 } from "@fortawesome/free-solid-svg-icons";
 
 function FlightInfo(result) {
@@ -133,8 +135,7 @@ function Result(departCode, arriveCode, departDate, returnDate, passengers) {
                 </Card.Text>
 
                 <Card.Text>
-                  <FontAwesomeIcon icon={faClock} />{" "}
-                  {result.departTimeReturn}
+                  <FontAwesomeIcon icon={faClock} /> {result.departTimeReturn}
                 </Card.Text>
               </Col>
               <Col>
@@ -149,8 +150,7 @@ function Result(departCode, arriveCode, departDate, returnDate, passengers) {
                 </Card.Text>
 
                 <Card.Text>
-                  <FontAwesomeIcon icon={faClock} />{" "}
-                  {result.arriveTimeReturn}
+                  <FontAwesomeIcon icon={faClock} /> {result.arriveTimeReturn}
                 </Card.Text>
               </Col>
             </Row>
@@ -160,14 +160,14 @@ function Result(departCode, arriveCode, departDate, returnDate, passengers) {
       <Col md={2}>
         <Card className="result">
           <Card.Body>
-            <Card.Title>Price</Card.Title>
-            <Card.Subtitle className="mb-2 text-muted">
-              {result.price}
-            </Card.Subtitle>
-            <FlightInfo
-              departCode={result.departCode}
-              arriveCode={result.arriveCode}
-            />
+            <Card.Title><FontAwesomeIcon icon={faMoneyBill1} /> Price</Card.Title>
+            <Card.Text>
+            <FontAwesomeIcon icon={faDollarSign} /> {result.price}
+            </Card.Text>
+              <FlightInfo
+                departCode={result.departCode}
+                arriveCode={result.arriveCode}
+              />
           </Card.Body>
         </Card>
       </Col>
