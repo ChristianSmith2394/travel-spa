@@ -36,29 +36,29 @@ function FlightInfo(result) {
         </Modal.Header>
         <Modal.Body>
           <Container>
-              <Accordion flush>
-                <Accordion.Item eventKey="0">
-                  <Accordion.Header>Destination Flight</Accordion.Header>
-                  <Accordion.Body>
+            <Accordion flush>
+              <Accordion.Item eventKey="0">
+                <Accordion.Header>Destination Flight</Accordion.Header>
+                <Accordion.Body>
                   Add information about the Destination Flight here
-                    <Map
-                      departCode={result.departCodeDestination}
-                      arriveCode={result.arriveCodeDestination}
-                    />
-                  </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="1">
-                  <Accordion.Header>Return Flight</Accordion.Header>
-                  <Accordion.Body>
-                    Add information about the Return Flight here
-                    <Map id="modalMap"
-                      departCode={result.departCodeReturn}
-                      arriveCode={result.arriveCodeReturn}
-                    />
-                  </Accordion.Body>
-                </Accordion.Item>
-              </Accordion>
-
+                  <Map
+                    departCode={result.departCodeDestination}
+                    arriveCode={result.arriveCodeDestination}
+                  />
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item eventKey="1">
+                <Accordion.Header>Return Flight</Accordion.Header>
+                <Accordion.Body>
+                  Add information about the Return Flight here
+                  <Map
+                    id="modalMap"
+                    departCode={result.departCodeReturn}
+                    arriveCode={result.arriveCodeReturn}
+                  />
+                </Accordion.Body>
+              </Accordion.Item>
+            </Accordion>
           </Container>
         </Modal.Body>
         <Modal.Footer>
