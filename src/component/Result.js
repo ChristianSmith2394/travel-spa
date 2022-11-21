@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import sampleResults from "../data/sampleResults.json";
 import Map from "./Map";
-import { Modal, Button, Form, Container } from "react-bootstrap";
+import { Modal, Button, Container, Accordion } from "react-bootstrap";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -16,7 +16,7 @@ import {
   faCalendar,
   faClock,
   faMoneyBill1,
-  faDollarSign
+  faDollarSign,
 } from "@fortawesome/free-solid-svg-icons";
 
 function FlightInfo(result) {
@@ -32,14 +32,45 @@ function FlightInfo(result) {
 
       <Modal show={show} onHide={handleClose} size="lg">
         <Modal.Header>
-          <Modal.Title>Title</Modal.Title>
+          <Modal.Title>This is a Title Yo</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Container>
-            <Map
-              departCode={result.departCode}
-              arriveCode={result.arriveCode}
-            />
+            {/* <Row className="justify-content-center"> */}
+              <Accordion flush >
+                <Accordion.Item eventKey="0">
+                  <Accordion.Header>Destination Flight</Accordion.Header>
+                  <Accordion.Body>
+                    <Map
+                      departCode={result.departCodeDestination}
+                      arriveCode={result.arriveCodeDestination}
+                    />
+                  </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="1">
+                  <Accordion.Header>Return Flight</Accordion.Header>
+                  <Accordion.Body>
+                    <Map
+                      departCode={result.departCodeReturn}
+                      arriveCode={result.arriveCodeReturn}
+                    />
+                  </Accordion.Body>
+                </Accordion.Item>
+              </Accordion>
+
+              {/* Destination Flight
+              <Map
+                departCode={result.departCodeDestination}
+                arriveCode={result.arriveCodeDestination}
+              />
+            </Row>
+            <Row className="justify-content-center">
+              Return Flight
+              <Map
+                departCode={result.departCodeReturn}
+                arriveCode={result.arriveCodeReturn}
+              /> */}
+            {/* </Row> */}
           </Container>
         </Modal.Body>
         <Modal.Footer>
@@ -69,7 +100,7 @@ function Result(departCode, arriveCode, departDate, returnDate, passengers) {
         <Card className="result">
           <Card.Body>
             <Card.Title className="text-center">
-              {result.airlineDeparture}{" "}
+              {result.airlineDestination}{" "}
               <FontAwesomeIcon icon={faArrowRightToBracket} />
             </Card.Title>
             <Card.Subtitle className="mb-2 text-muted">
@@ -79,33 +110,33 @@ function Result(departCode, arriveCode, departDate, returnDate, passengers) {
               <Col>
                 <Card.Text>
                   <FontAwesomeIcon icon={faPlaneDeparture} />{" "}
-                  {result.departCodeDeparture}{" "}
+                  {result.departCodeDestination}{" "}
                 </Card.Text>
 
                 <Card.Text>
                   <FontAwesomeIcon icon={faCalendar} />{" "}
-                  {result.departDateDeparture}
+                  {result.departDateDestination}
                 </Card.Text>
 
                 <Card.Text>
                   <FontAwesomeIcon icon={faClock} />{" "}
-                  {result.departTimeDeparture}
+                  {result.departTimeDestination}
                 </Card.Text>
               </Col>
               <Col>
                 <Card.Text>
                   <FontAwesomeIcon icon={faPlaneArrival} />{" "}
-                  {result.arriveCodeDeparture}{" "}
+                  {result.arriveCodeDestination}{" "}
                 </Card.Text>
 
                 <Card.Text>
                   <FontAwesomeIcon icon={faCalendar} />{" "}
-                  {result.arriveDateDeparture}
+                  {result.arriveDateDestination}
                 </Card.Text>
 
                 <Card.Text>
                   <FontAwesomeIcon icon={faClock} />{" "}
-                  {result.arriveTimeDeparture}
+                  {result.arriveTimeDestination}
                 </Card.Text>
               </Col>
             </Row>
@@ -160,14 +191,18 @@ function Result(departCode, arriveCode, departDate, returnDate, passengers) {
       <Col md={2}>
         <Card className="result">
           <Card.Body>
-            <Card.Title><FontAwesomeIcon icon={faMoneyBill1} /> Price</Card.Title>
+            <Card.Title>
+              <FontAwesomeIcon icon={faMoneyBill1} /> Price
+            </Card.Title>
             <Card.Text>
-            <FontAwesomeIcon icon={faDollarSign} /> {result.price}
+              <FontAwesomeIcon icon={faDollarSign} /> {result.price}
             </Card.Text>
-              <FlightInfo
-                departCode={result.departCode}
-                arriveCode={result.arriveCode}
-              />
+            <FlightInfo
+              departCodeDestination={result.departCodeDestination}
+              arriveCodeDestination={result.arriveCodeDestination}
+              departCodeReturn={result.departCodeReturn}
+              arriveCodeReturn={result.arriveCodeReturn}
+            />
           </Card.Body>
         </Card>
       </Col>
