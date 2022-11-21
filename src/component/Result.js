@@ -36,11 +36,11 @@ function FlightInfo(result) {
         </Modal.Header>
         <Modal.Body>
           <Container>
-            {/* <Row className="justify-content-center"> */}
-              <Accordion flush >
+              <Accordion flush>
                 <Accordion.Item eventKey="0">
                   <Accordion.Header>Destination Flight</Accordion.Header>
                   <Accordion.Body>
+                  Add information about the Destination Flight here
                     <Map
                       departCode={result.departCodeDestination}
                       arriveCode={result.arriveCodeDestination}
@@ -50,7 +50,7 @@ function FlightInfo(result) {
                 <Accordion.Item eventKey="1">
                   <Accordion.Header>Return Flight</Accordion.Header>
                   <Accordion.Body>
-                    Add informtatoin about the return flight here
+                    Add information about the Return Flight here
                     <Map id="modalMap"
                       departCode={result.departCodeReturn}
                       arriveCode={result.arriveCodeReturn}
