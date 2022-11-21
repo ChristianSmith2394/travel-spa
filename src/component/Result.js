@@ -8,8 +8,7 @@ import Map from "./Map";
 import { Modal, Button, Form, Container } from "react-bootstrap";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRightToBracket, faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons';
-
+import { faArrowRightToBracket, faArrowRightFromBracket, faPlaneDeparture, faPlaneArrival } from '@fortawesome/free-solid-svg-icons';
 
 
 function FlightInfo(result) {
@@ -60,14 +59,15 @@ function Result(departCode, arriveCode, departDate, returnDate, passengers) {
       <Col>
         <Card className="result">
           <Card.Body>
-            <Card.Title><FontAwesomeIcon icon={faArrowRightToBracket} /> {result.airline}</Card.Title> 
+            <Card.Title><FontAwesomeIcon icon={faArrowRightToBracket} /> {result.airlineDeparture}</Card.Title> 
             <Card.Subtitle className="mb-2 text-muted">
-              {result.departCode} to {result.arriveCode}
+              {result.departCodeDeparture} to {result.arriveCodeDeparture}
             </Card.Subtitle>
             <Card.Text>
-             
-              {result.departDate} {result.departTimeD}
-              {result.arriveTimeD}
+            <FontAwesomeIcon icon={faPlaneDeparture} /> {result.departDateDeparture} - {result.departTimeDeparture}
+            </Card.Text>
+            <Card.Text>
+            <FontAwesomeIcon icon={faPlaneArrival} />  {result.arriveDateDeparture} - {result.arriveTimeDeparture}
             </Card.Text>
           </Card.Body>
         </Card>
@@ -75,14 +75,13 @@ function Result(departCode, arriveCode, departDate, returnDate, passengers) {
       <Col>
         <Card className="result">
           <Card.Body>
-            <Card.Title><FontAwesomeIcon icon={faArrowRightFromBracket} /> {result.airline}</Card.Title>
+            <Card.Title><FontAwesomeIcon icon={faArrowRightFromBracket} /> {result.airlineReturn}</Card.Title>
             
             <Card.Subtitle className="mb-2 text-muted">
                {result.arriveCode} to {result.departCode}
             </Card.Subtitle>
             <Card.Text>
-               {result.returnDate} {result.returnTimeR}
-              {result.arriveTimeR}
+               {result.returnDate} - {result.returnTimeR}
             </Card.Text>
           </Card.Body>
         </Card>
