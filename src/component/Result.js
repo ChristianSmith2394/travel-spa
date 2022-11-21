@@ -59,19 +59,6 @@ function FlightInfo(result) {
                 </Accordion.Item>
               </Accordion>
 
-              {/* Destination Flight
-              <Map
-                departCode={result.departCodeDestination}
-                arriveCode={result.arriveCodeDestination}
-              />
-            </Row>
-            <Row className="justify-content-center">
-              Return Flight
-              <Map
-                departCode={result.departCodeReturn}
-                arriveCode={result.arriveCodeReturn}
-              /> */}
-            {/* </Row> */}
           </Container>
         </Modal.Body>
         <Modal.Footer>
