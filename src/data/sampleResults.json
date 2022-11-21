@@ -14,7 +14,7 @@
         "departDateReturn": "2021-11-01",
         "departTimeReturn": "10:00",
         "arriveCodeReturn": "ACY",
-        "arriveDatReturn": "2021-11-01",
+        "arriveDateReturn": "2021-11-01",
         "arriveTimeReturn": "12:00"
     },
     {
@@ -32,7 +32,7 @@
         "departDateReturn": "2021-11-01",
         "departTimeReturn": "10:00",
         "arriveCodeReturn": "ACY",
-        "arriveDatReturn": "2021-11-01",
+        "arriveDateReturn": "2021-11-01",
         "arriveTimeReturn": "12:00"
     },
     {
@@ -50,7 +50,7 @@
         "departDateReturn": "2021-11-01",
         "departTimeReturn": "10:00",
         "arriveCodeReturn": "ACY",
-        "arriveDatReturn": "2021-11-01",
+        "arriveDateReturn": "2021-11-01",
         "arriveTimeReturn": "12:00"
     },
     {
@@ -68,7 +68,7 @@
         "departDateReturn": "2021-11-01",
         "departTimeReturn": "10:00",
         "arriveCodeReturn": "ACY",
-        "arriveDatReturn": "2021-11-01",
+        "arriveDateReturn": "2021-11-01",
         "arriveTimeReturn": "12:00"
     },
     {
@@ -86,7 +86,7 @@
         "departDateReturn": "2021-11-01",
         "departTimeReturn": "10:00",
         "arriveCodeReturn": "ACY",
-        "arriveDatReturn": "2021-11-01",
+        "arriveDateReturn": "2021-11-01",
         "arriveTimeReturn": "12:00"
     },
     {
@@ -104,7 +104,7 @@
         "departDateReturn": "2021-11-01",
         "departTimeReturn": "10:00",
         "arriveCodeReturn": "ACY",
-        "arriveDatReturn": "2021-11-01",
+        "arriveDateReturn": "2021-11-01",
         "arriveTimeReturn": "12:00"
     },
     {
@@ -122,7 +122,7 @@
         "departDateReturn": "2021-11-01",
         "departTimeReturn": "10:00",
         "arriveCodeReturn": "ACY",
-        "arriveDatReturn": "2021-11-01",
+        "arriveDateReturn": "2021-11-01",
         "arriveTimeReturn": "12:00"
     }
 

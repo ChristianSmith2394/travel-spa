@@ -7,9 +7,15 @@ import sampleResults from "../data/sampleResults.json";
 import Map from "./Map";
 import { Modal, Button, Form, Container } from "react-bootstrap";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRightToBracket, faArrowRightFromBracket, faPlaneDeparture, faPlaneArrival } from '@fortawesome/free-solid-svg-icons';
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faArrowRightToBracket,
+  faArrowRightFromBracket,
+  faPlaneDeparture,
+  faPlaneArrival,
+  faCalendar,
+  faClock,
+} from "@fortawesome/free-solid-svg-icons";
 
 function FlightInfo(result) {
   const [show, setShow] = useState(false);
@@ -28,8 +34,11 @@ function FlightInfo(result) {
         </Modal.Header>
         <Modal.Body>
           <Container>
-        <Map departCode={result.departCode} arriveCode={result.arriveCode} />
-        </Container>
+            <Map
+              departCode={result.departCode}
+              arriveCode={result.arriveCode}
+            />
+          </Container>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="ckt" type="submit" onClick={handleClose}>
@@ -46,43 +55,105 @@ function FlightInfo(result) {
 }
 
 function Result(departCode, arriveCode, departDate, returnDate, passengers) {
+  // const handleOnClick = (result) => {
+  //     console.log(result);
 
-
-// const handleOnClick = (result) => {
-//     console.log(result);
-
-//     
-//   };
+  //
+  //   };
 
   return sampleResults.map((result) => (
     <Row className="result-card mx-auto">
       <Col>
         <Card className="result">
           <Card.Body>
-            <Card.Title><FontAwesomeIcon icon={faArrowRightToBracket} /> {result.airlineDeparture}</Card.Title> 
+            <Card.Title className="text-center">
+              <FontAwesomeIcon icon={faArrowRightToBracket} />{" "}
+              {result.airlineDeparture}
+            </Card.Title>
             <Card.Subtitle className="mb-2 text-muted">
-              {result.departCodeDeparture} to {result.arriveCodeDeparture}
+              {/* Can add Subtitle if you want */}
             </Card.Subtitle>
-            <Card.Text>
-            <FontAwesomeIcon icon={faPlaneDeparture} /> {result.departDateDeparture} - {result.departTimeDeparture}
-            </Card.Text>
-            <Card.Text>
-            <FontAwesomeIcon icon={faPlaneArrival} />  {result.arriveDateDeparture} - {result.arriveTimeDeparture}
-            </Card.Text>
+            <Row>
+              <Col>
+                <Card.Text>
+                  <FontAwesomeIcon icon={faPlaneDeparture} />{" "}
+                  {result.departCodeDeparture}{" "}
+                </Card.Text>
+
+                <Card.Text>
+                  <FontAwesomeIcon icon={faCalendar} />{" "}
+                  {result.departDateDeparture}
+                </Card.Text>
+
+                <Card.Text>
+                  <FontAwesomeIcon icon={faClock} />{" "}
+                  {result.departTimeDeparture}
+                </Card.Text>
+              </Col>
+              <Col>
+                <Card.Text>
+                  <FontAwesomeIcon icon={faPlaneArrival} />{" "}
+                  {result.arriveCodeDeparture}{" "}
+                </Card.Text>
+
+                <Card.Text>
+                  <FontAwesomeIcon icon={faCalendar} />{" "}
+                  {result.arriveDateDeparture}
+                </Card.Text>
+
+                <Card.Text>
+                  <FontAwesomeIcon icon={faClock} />{" "}
+                  {result.arriveTimeDeparture}
+                </Card.Text>
+              </Col>
+            </Row>
           </Card.Body>
         </Card>
       </Col>
       <Col>
         <Card className="result">
           <Card.Body>
-            <Card.Title><FontAwesomeIcon icon={faArrowRightFromBracket} /> {result.airlineReturn}</Card.Title>
-            
+            <Card.Title className="text-center">
+              <FontAwesomeIcon icon={faArrowRightToBracket} />{" "}
+              {result.airlineReturn}
+            </Card.Title>
             <Card.Subtitle className="mb-2 text-muted">
-               {result.arriveCode} to {result.departCode}
+              {/* Can add Subtitle if you want */}
             </Card.Subtitle>
-            <Card.Text>
-               {result.returnDate} - {result.returnTimeR}
-            </Card.Text>
+            <Row>
+              <Col>
+                <Card.Text>
+                  <FontAwesomeIcon icon={faPlaneDeparture} />{" "}
+                  {result.departCodeReturn}{" "}
+                </Card.Text>
+
+                <Card.Text>
+                  <FontAwesomeIcon icon={faCalendar} />{" "}
+                  {result.departDateReturn}
+                </Card.Text>
+
+                <Card.Text>
+                  <FontAwesomeIcon icon={faClock} />{" "}
+                  {result.departTimeReturn}
+                </Card.Text>
+              </Col>
+              <Col>
+                <Card.Text>
+                  <FontAwesomeIcon icon={faPlaneArrival} />{" "}
+                  {result.arriveCodeReturn}{" "}
+                </Card.Text>
+
+                <Card.Text>
+                  <FontAwesomeIcon icon={faCalendar} />{" "}
+                  {result.arriveDateReturn}
+                </Card.Text>
+
+                <Card.Text>
+                  <FontAwesomeIcon icon={faClock} />{" "}
+                  {result.arriveTimeReturn}
+                </Card.Text>
+              </Col>
+            </Row>
           </Card.Body>
         </Card>
       </Col>
@@ -93,9 +164,9 @@ function Result(departCode, arriveCode, departDate, returnDate, passengers) {
             <Card.Subtitle className="mb-2 text-muted">
               {result.price}
             </Card.Subtitle>
-            <FlightInfo 
-            departCode={result.departCode}  
-            arriveCode={result.arriveCode}
+            <FlightInfo
+              departCode={result.departCode}
+              arriveCode={result.arriveCode}
             />
           </Card.Body>
         </Card>
