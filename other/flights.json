@@ -1,0 +1,2080 @@
+{
+    "data": [
+        {
+            "type": "flight-offer",
+            "id": "1",
+            "source": "GDS",
+            "instantTicketingRequired": "False",
+            "nonHomogeneous": "False",
+            "oneWay": "False",
+            "lastTicketingDate": "2022-11-22",
+            "numberOfBookableSeats": 9,
+            "itineraries": [
+                {
+                    "duration": "PT24H53M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "ACY",
+                                "at": "2022-11-23T12:20:00"
+                            },
+                            "arrival": {
+                                "iataCode": "MCO",
+                                "terminal": "0",
+                                "at": "2022-11-23T14:51:00"
+                            },
+                            "carrierCode": "NK",
+                            "number": "531",
+                            "aircraft": {
+                                "code": "32B"
+                            },
+                            "operating": {
+                                "carrierCode": "NK"
+                            },
+                            "duration": "PT2H31M",
+                            "id": "10",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": "False"
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "MCO",
+                                "terminal": "0",
+                                "at": "2022-11-23T20:51:00"
+                            },
+                            "arrival": {
+                                "iataCode": "ATL",
+                                "terminal": "N",
+                                "at": "2022-11-23T22:31:00"
+                            },
+                            "carrierCode": "NK",
+                            "number": "770",
+                            "aircraft": {
+                                "code": "32N"
+                            },
+                            "operating": {
+                                "carrierCode": "NK"
+                            },
+                            "duration": "PT1H40M",
+                            "id": "11",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": "False"
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "ATL",
+                                "terminal": "N",
+                                "at": "2022-11-24T10:30:00"
+                            },
+                            "arrival": {
+                                "iataCode": "MSP",
+                                "terminal": "1",
+                                "at": "2022-11-24T12:13:00"
+                            },
+                            "carrierCode": "NK",
+                            "number": "1081",
+                            "aircraft": {
+                                "code": "32N"
+                            },
+                            "operating": {
+                                "carrierCode": "NK"
+                            },
+                            "duration": "PT2H43M",
+                            "id": "12",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": "False"
+                        }
+                    ]
+                },
+                {
+                    "duration": "PT38H5M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "MSP",
+                                "terminal": "1",
+                                "at": "2022-11-29T18:45:00"
+                            },
+                            "arrival": {
+                                "iataCode": "DTW",
+                                "terminal": "N",
+                                "at": "2022-11-29T21:27:00"
+                            },
+                            "carrierCode": "NK",
+                            "number": "1342",
+                            "aircraft": {
+                                "code": "32B"
+                            },
+                            "operating": {
+                                "carrierCode": "NK"
+                            },
+                            "duration": "PT1H42M",
+                            "id": "13",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": "False"
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "DTW",
+                                "terminal": "N",
+                                "at": "2022-11-30T11:00:00"
+                            },
+                            "arrival": {
+                                "iataCode": "MYR",
+                                "at": "2022-11-30T12:50:00"
+                            },
+                            "carrierCode": "NK",
+                            "number": "3039",
+                            "aircraft": {
+                                "code": "32N"
+                            },
+                            "operating": {
+                                "carrierCode": "NK"
+                            },
+                            "duration": "PT1H50M",
+                            "id": "14",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": "False"
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "MYR",
+                                "at": "2022-12-01T08:30:00"
+                            },
+                            "arrival": {
+                                "iataCode": "ACY",
+                                "at": "2022-12-01T09:50:00"
+                            },
+                            "carrierCode": "NK",
+                            "number": "355",
+                            "aircraft": {
+                                "code": "319"
+                            },
+                            "operating": {
+                                "carrierCode": "NK"
+                            },
+                            "duration": "PT1H20M",
+                            "id": "15",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": "False"
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "USD",
+                "total": "2325.50",
+                "base": "1902.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "2325.50"
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": "False"
+            },
+            "validatingAirlineCodes": [
+                "NK"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "USD",
+                        "total": "465.10",
+                        "base": "380.40"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "10",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "11",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "12",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TA3NR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "13",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "U7XSNR",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "14",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GNR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "15",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GA7NR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "2",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "USD",
+                        "total": "465.10",
+                        "base": "380.40"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "10",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "11",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "12",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TA3NR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "13",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "U7XSNR",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "14",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GNR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "15",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GA7NR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "3",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "USD",
+                        "total": "465.10",
+                        "base": "380.40"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "10",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "11",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "12",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TA3NR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "13",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "U7XSNR",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "14",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GNR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "15",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GA7NR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "4",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "USD",
+                        "total": "465.10",
+                        "base": "380.40"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "10",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "11",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "12",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TA3NR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "13",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "U7XSNR",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "14",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GNR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "15",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GA7NR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "5",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "USD",
+                        "total": "465.10",
+                        "base": "380.40"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "10",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "11",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "12",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TA3NR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "13",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "U7XSNR",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "14",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GNR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "15",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GA7NR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "flight-offer",
+            "id": "2",
+            "source": "GDS",
+            "instantTicketingRequired": "False",
+            "nonHomogeneous": "False",
+            "oneWay": "False",
+            "lastTicketingDate": "2022-11-22",
+            "numberOfBookableSeats": 9,
+            "itineraries": [
+                {
+                    "duration": "PT26H48M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "ACY",
+                                "at": "2022-11-23T10:25:00"
+                            },
+                            "arrival": {
+                                "iataCode": "FLL",
+                                "terminal": "4",
+                                "at": "2022-11-23T13:05:00"
+                            },
+                            "carrierCode": "NK",
+                            "number": "1729",
+                            "aircraft": {
+                                "code": "32N"
+                            },
+                            "operating": {
+                                "carrierCode": "NK"
+                            },
+                            "duration": "PT2H40M",
+                            "id": "4",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": "False"
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "FLL",
+                                "terminal": "4",
+                                "at": "2022-11-23T19:00:00"
+                            },
+                            "arrival": {
+                                "iataCode": "ATL",
+                                "terminal": "N",
+                                "at": "2022-11-23T20:58:00"
+                            },
+                            "carrierCode": "NK",
+                            "number": "1078",
+                            "aircraft": {
+                                "code": "32B"
+                            },
+                            "operating": {
+                                "carrierCode": "NK"
+                            },
+                            "duration": "PT1H58M",
+                            "id": "5",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": "False"
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "ATL",
+                                "terminal": "N",
+                                "at": "2022-11-24T10:30:00"
+                            },
+                            "arrival": {
+                                "iataCode": "MSP",
+                                "terminal": "1",
+                                "at": "2022-11-24T12:13:00"
+                            },
+                            "carrierCode": "NK",
+                            "number": "1081",
+                            "aircraft": {
+                                "code": "32N"
+                            },
+                            "operating": {
+                                "carrierCode": "NK"
+                            },
+                            "duration": "PT2H43M",
+                            "id": "6",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": "False"
+                        }
+                    ]
+                },
+                {
+                    "duration": "PT38H5M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "MSP",
+                                "terminal": "1",
+                                "at": "2022-11-29T18:45:00"
+                            },
+                            "arrival": {
+                                "iataCode": "DTW",
+                                "terminal": "N",
+                                "at": "2022-11-29T21:27:00"
+                            },
+                            "carrierCode": "NK",
+                            "number": "1342",
+                            "aircraft": {
+                                "code": "32B"
+                            },
+                            "operating": {
+                                "carrierCode": "NK"
+                            },
+                            "duration": "PT1H42M",
+                            "id": "13",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": "False"
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "DTW",
+                                "terminal": "N",
+                                "at": "2022-11-30T11:00:00"
+                            },
+                            "arrival": {
+                                "iataCode": "MYR",
+                                "at": "2022-11-30T12:50:00"
+                            },
+                            "carrierCode": "NK",
+                            "number": "3039",
+                            "aircraft": {
+                                "code": "32N"
+                            },
+                            "operating": {
+                                "carrierCode": "NK"
+                            },
+                            "duration": "PT1H50M",
+                            "id": "14",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": "False"
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "MYR",
+                                "at": "2022-12-01T08:30:00"
+                            },
+                            "arrival": {
+                                "iataCode": "ACY",
+                                "at": "2022-12-01T09:50:00"
+                            },
+                            "carrierCode": "NK",
+                            "number": "355",
+                            "aircraft": {
+                                "code": "319"
+                            },
+                            "operating": {
+                                "carrierCode": "NK"
+                            },
+                            "duration": "PT1H20M",
+                            "id": "15",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": "False"
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "USD",
+                "total": "2325.50",
+                "base": "1902.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "2325.50"
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": "False"
+            },
+            "validatingAirlineCodes": [
+                "NK"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "USD",
+                        "total": "465.10",
+                        "base": "380.40"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "4",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "5",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "6",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TA3NR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "13",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "U7XSNR",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "14",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GNR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "15",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GA7NR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "2",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "USD",
+                        "total": "465.10",
+                        "base": "380.40"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "4",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "5",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "6",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TA3NR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "13",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "U7XSNR",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "14",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GNR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "15",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GA7NR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "3",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "USD",
+                        "total": "465.10",
+                        "base": "380.40"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "4",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "5",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "6",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TA3NR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "13",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "U7XSNR",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "14",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GNR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "15",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GA7NR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "4",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "USD",
+                        "total": "465.10",
+                        "base": "380.40"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "4",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "5",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "6",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TA3NR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "13",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "U7XSNR",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "14",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GNR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "15",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GA7NR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "5",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "USD",
+                        "total": "465.10",
+                        "base": "380.40"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "4",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "5",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "6",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TA3NR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "13",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "U7XSNR",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "14",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GNR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "15",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GA7NR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "flight-offer",
+            "id": "3",
+            "source": "GDS",
+            "instantTicketingRequired": "False",
+            "nonHomogeneous": "False",
+            "oneWay": "False",
+            "lastTicketingDate": "2022-11-22",
+            "numberOfBookableSeats": 9,
+            "itineraries": [
+                {
+                    "duration": "PT26H48M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "ACY",
+                                "at": "2022-11-23T10:25:00"
+                            },
+                            "arrival": {
+                                "iataCode": "FLL",
+                                "terminal": "4",
+                                "at": "2022-11-23T13:05:00"
+                            },
+                            "carrierCode": "NK",
+                            "number": "1729",
+                            "aircraft": {
+                                "code": "32N"
+                            },
+                            "operating": {
+                                "carrierCode": "NK"
+                            },
+                            "duration": "PT2H40M",
+                            "id": "7",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": "False"
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "FLL",
+                                "terminal": "4",
+                                "at": "2022-11-23T21:00:00"
+                            },
+                            "arrival": {
+                                "iataCode": "ATL",
+                                "terminal": "N",
+                                "at": "2022-11-23T22:56:00"
+                            },
+                            "carrierCode": "NK",
+                            "number": "1232",
+                            "aircraft": {
+                                "code": "32A"
+                            },
+                            "operating": {
+                                "carrierCode": "NK"
+                            },
+                            "duration": "PT1H56M",
+                            "id": "8",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": "False"
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "ATL",
+                                "terminal": "N",
+                                "at": "2022-11-24T10:30:00"
+                            },
+                            "arrival": {
+                                "iataCode": "MSP",
+                                "terminal": "1",
+                                "at": "2022-11-24T12:13:00"
+                            },
+                            "carrierCode": "NK",
+                            "number": "1081",
+                            "aircraft": {
+                                "code": "32N"
+                            },
+                            "operating": {
+                                "carrierCode": "NK"
+                            },
+                            "duration": "PT2H43M",
+                            "id": "9",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": "False"
+                        }
+                    ]
+                },
+                {
+                    "duration": "PT38H5M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "MSP",
+                                "terminal": "1",
+                                "at": "2022-11-29T18:45:00"
+                            },
+                            "arrival": {
+                                "iataCode": "DTW",
+                                "terminal": "N",
+                                "at": "2022-11-29T21:27:00"
+                            },
+                            "carrierCode": "NK",
+                            "number": "1342",
+                            "aircraft": {
+                                "code": "32B"
+                            },
+                            "operating": {
+                                "carrierCode": "NK"
+                            },
+                            "duration": "PT1H42M",
+                            "id": "13",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": "False"
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "DTW",
+                                "terminal": "N",
+                                "at": "2022-11-30T11:00:00"
+                            },
+                            "arrival": {
+                                "iataCode": "MYR",
+                                "at": "2022-11-30T12:50:00"
+                            },
+                            "carrierCode": "NK",
+                            "number": "3039",
+                            "aircraft": {
+                                "code": "32N"
+                            },
+                            "operating": {
+                                "carrierCode": "NK"
+                            },
+                            "duration": "PT1H50M",
+                            "id": "14",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": "False"
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "MYR",
+                                "at": "2022-12-01T08:30:00"
+                            },
+                            "arrival": {
+                                "iataCode": "ACY",
+                                "at": "2022-12-01T09:50:00"
+                            },
+                            "carrierCode": "NK",
+                            "number": "355",
+                            "aircraft": {
+                                "code": "319"
+                            },
+                            "operating": {
+                                "carrierCode": "NK"
+                            },
+                            "duration": "PT1H20M",
+                            "id": "15",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": "False"
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "USD",
+                "total": "2325.50",
+                "base": "1902.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "2325.50"
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": "False"
+            },
+            "validatingAirlineCodes": [
+                "NK"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "USD",
+                        "total": "465.10",
+                        "base": "380.40"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "7",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "8",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "9",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TA3NR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "13",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "U7XSNR",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "14",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GNR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "15",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GA7NR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "2",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "USD",
+                        "total": "465.10",
+                        "base": "380.40"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "7",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "8",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "9",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TA3NR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "13",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "U7XSNR",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "14",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GNR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "15",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GA7NR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "3",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "USD",
+                        "total": "465.10",
+                        "base": "380.40"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "7",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "8",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "9",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TA3NR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "13",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "U7XSNR",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "14",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GNR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "15",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GA7NR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "4",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "USD",
+                        "total": "465.10",
+                        "base": "380.40"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "7",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "8",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "9",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TA3NR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "13",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "U7XSNR",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "14",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GNR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "15",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GA7NR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "5",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "USD",
+                        "total": "465.10",
+                        "base": "380.40"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "7",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "8",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "9",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TA3NR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "13",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "U7XSNR",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "14",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GNR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "15",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GA7NR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "flight-offer",
+            "id": "4",
+            "source": "GDS",
+            "instantTicketingRequired": "False",
+            "nonHomogeneous": "False",
+            "oneWay": "False",
+            "lastTicketingDate": "2022-11-22",
+            "numberOfBookableSeats": 9,
+            "itineraries": [
+                {
+                    "duration": "PT29H21M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "ACY",
+                                "at": "2022-11-23T12:20:00"
+                            },
+                            "arrival": {
+                                "iataCode": "MCO",
+                                "terminal": "0",
+                                "at": "2022-11-23T14:51:00"
+                            },
+                            "carrierCode": "NK",
+                            "number": "531",
+                            "aircraft": {
+                                "code": "32B"
+                            },
+                            "operating": {
+                                "carrierCode": "NK"
+                            },
+                            "duration": "PT2H31M",
+                            "id": "1",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": "False"
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "MCO",
+                                "terminal": "0",
+                                "at": "2022-11-23T20:51:00"
+                            },
+                            "arrival": {
+                                "iataCode": "ATL",
+                                "terminal": "N",
+                                "at": "2022-11-23T22:31:00"
+                            },
+                            "carrierCode": "NK",
+                            "number": "770",
+                            "aircraft": {
+                                "code": "32N"
+                            },
+                            "operating": {
+                                "carrierCode": "NK"
+                            },
+                            "duration": "PT1H40M",
+                            "id": "2",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": "False"
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "ATL",
+                                "terminal": "N",
+                                "at": "2022-11-24T15:00:00"
+                            },
+                            "arrival": {
+                                "iataCode": "MSP",
+                                "terminal": "1",
+                                "at": "2022-11-24T16:41:00"
+                            },
+                            "carrierCode": "NK",
+                            "number": "40",
+                            "aircraft": {
+                                "code": "32A"
+                            },
+                            "operating": {
+                                "carrierCode": "NK"
+                            },
+                            "duration": "PT2H41M",
+                            "id": "3",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": "False"
+                        }
+                    ]
+                },
+                {
+                    "duration": "PT38H5M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "MSP",
+                                "terminal": "1",
+                                "at": "2022-11-29T18:45:00"
+                            },
+                            "arrival": {
+                                "iataCode": "DTW",
+                                "terminal": "N",
+                                "at": "2022-11-29T21:27:00"
+                            },
+                            "carrierCode": "NK",
+                            "number": "1342",
+                            "aircraft": {
+                                "code": "32B"
+                            },
+                            "operating": {
+                                "carrierCode": "NK"
+                            },
+                            "duration": "PT1H42M",
+                            "id": "13",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": "False"
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "DTW",
+                                "terminal": "N",
+                                "at": "2022-11-30T11:00:00"
+                            },
+                            "arrival": {
+                                "iataCode": "MYR",
+                                "at": "2022-11-30T12:50:00"
+                            },
+                            "carrierCode": "NK",
+                            "number": "3039",
+                            "aircraft": {
+                                "code": "32N"
+                            },
+                            "operating": {
+                                "carrierCode": "NK"
+                            },
+                            "duration": "PT1H50M",
+                            "id": "14",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": "False"
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "MYR",
+                                "at": "2022-12-01T08:30:00"
+                            },
+                            "arrival": {
+                                "iataCode": "ACY",
+                                "at": "2022-12-01T09:50:00"
+                            },
+                            "carrierCode": "NK",
+                            "number": "355",
+                            "aircraft": {
+                                "code": "319"
+                            },
+                            "operating": {
+                                "carrierCode": "NK"
+                            },
+                            "duration": "PT1H20M",
+                            "id": "15",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": "False"
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "USD",
+                "total": "2325.50",
+                "base": "1902.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "2325.50"
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": "False"
+            },
+            "validatingAirlineCodes": [
+                "NK"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "USD",
+                        "total": "465.10",
+                        "base": "380.40"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "1",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "2",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "3",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TA3NR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "13",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "U7XSNR",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "14",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GNR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "15",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GA7NR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "2",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "USD",
+                        "total": "465.10",
+                        "base": "380.40"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "1",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "2",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "3",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TA3NR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "13",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "U7XSNR",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "14",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GNR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "15",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GA7NR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "3",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "USD",
+                        "total": "465.10",
+                        "base": "380.40"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "1",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "2",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "3",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TA3NR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "13",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "U7XSNR",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "14",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GNR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "15",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GA7NR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "4",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "USD",
+                        "total": "465.10",
+                        "base": "380.40"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "1",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "2",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "3",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TA3NR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "13",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "U7XSNR",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "14",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GNR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "15",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GA7NR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "5",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "USD",
+                        "total": "465.10",
+                        "base": "380.40"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "1",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "2",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TNR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "3",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "TA3NR",
+                            "class": "T",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "13",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "U7XSNR",
+                            "class": "U",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "14",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GNR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        },
+                        {
+                            "segmentId": "15",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "GA7NR",
+                            "class": "G",
+                            "includedCheckedBags": {
+                                "quantity": 0
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
