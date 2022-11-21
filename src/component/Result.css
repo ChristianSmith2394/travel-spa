@@ -1,31 +1,26 @@
 .result {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
     max-height: none;
-    width: 100%;
+    /* width: 50%; */
     align-items: center;
-    background-image: url('../assets/port5.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center calc(50% - 150px); 
+    background-color: rgba(0, 60, 59, .0);
+    border: 0px;
 }
 
 .result-card {
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     border: 2px solid rgb(0, 60, 59);
-    width: 40%;
-    height: 15vh;
-    margin-top: 30px;
+    width: 80%;
+    height: 20vh;
+    margin-top: 15px;
     border-radius: 25px;
+    background-color: rgba(0, 60, 59, .2);
+  }
+  
+  .result-card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
     background-color: rgba(0, 60, 59, .5);
-}
-
-.result-card h6 {
-    padding-left: 30px;
-    color: white
 }

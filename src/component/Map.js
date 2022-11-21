@@ -10,7 +10,7 @@ import { red } from "@mui/material/colors";
 import items from "../data/airports.json";
 
 const mapContainerStyle = {
-  width: "100vw",
+  width: "100%",
   height: "40vh",
 };
 
