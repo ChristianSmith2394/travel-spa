@@ -50,7 +50,8 @@ function FlightInfo(result) {
                 <Accordion.Item eventKey="1">
                   <Accordion.Header>Return Flight</Accordion.Header>
                   <Accordion.Body>
-                    <Map
+                    Add informtatoin about the return flight here
+                    <Map id="modalMap"
                       departCode={result.departCodeReturn}
                       arriveCode={result.arriveCodeReturn}
                     />
