@@ -2,9 +2,11 @@ import React, { useState } from "react";
 // import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import "./Header.css";
-import { Modal, Button, Form } from "react-bootstrap";
+import { Modal, Button, Form, Dropdown } from "react-bootstrap";
 import { auth } from "../firebase";
 import { useStateValue } from "./StateProvider";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 function InfoModal() {
   // const [{ user }, dispatch] = useStateValue();
@@ -110,36 +112,46 @@ function InfoModal() {
 
 function Header() {
   return (
-    <nav class="navbar navbar-light navbar-expand-sm">
-      <div class="container-fluid">
-        <a class="col-2 navbar-brand" href="/">
+    <nav className="navbar navbar-light navbar-expand-sm">
+      <div className="container-fluid">
+        <a className="col-2 navbar-brand" href="/">
           <img src={logo} alt="logo" id="logo" />
         </a>
-        <ul class="navbar-nav offset-6 me-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/">
+        <ul className="navbar-nav offset-6 me-auto">
+          <li className="nav-item">
+            <a className="nav-link" href="/">
               Home
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/about">
+          <li className="nav-item">
+            <a className="nav-link" href="/about">
               About
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/account">
+          {/* <li className="nav-item">
+            <a className="nav-link" href="/account">
               Account
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/register">
+          <li className="nav-item">
+            <a className="nav-link" href="/register">
               Register
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/login">
+          <li className="nav-item">
+            <a className="nav-link" href="/login">
               Login
             </a>
+          </li> */}
+          <li className="nav-item">
+          <Dropdown>
+            <Dropdown.Toggle variant="ckt" icon="">Login</Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item href="login">Login</Dropdown.Item>
+              <Dropdown.Item href="register">Register</Dropdown.Item>
+              <Dropdown.Item href="account">Account</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
           </li>
         </ul>
       </div>
