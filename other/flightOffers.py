@@ -35,7 +35,6 @@ def api():
     departDate = postData['departDate']
     returnDate = postData['returnDate']
     passengers = postData['passengers']
-
     params = {"originLocationCode": departCode,
               "destinationLocationCode": arriveCode,
               "departureDate": departDate,
@@ -88,7 +87,6 @@ def api():
                                 'itinDuration': iDuration
                                 })
 
-    print(dict_list)
     return jsonify(dict_list)
 
 if __name__ == '__main__':
