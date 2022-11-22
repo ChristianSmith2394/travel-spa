@@ -13,7 +13,7 @@ function HomePage() {
   const [departDate, setDepartDate] = React.useState("");
   const [returnDate, setReturnDate] = React.useState("");
   const [passengers, setPassengers] = React.useState("");
-  const [flightData, setFlightData] = React.useState([{}]);
+  const [flightData, setFlightData] = React.useState([]);
 
   return (
     <div className="homepage">

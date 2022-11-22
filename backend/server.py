@@ -21,6 +21,7 @@ flight_url = "https://test.api.amadeus.com/v2/shopping/flight-offers"
 def get_token():
     token_respone = requests.post(
         token_url, data=token_payload, headers=token_headers).json()
+    print(token_respone)
     ACCESS_TOKEN = token_respone['access_token']
     return ACCESS_TOKEN
 

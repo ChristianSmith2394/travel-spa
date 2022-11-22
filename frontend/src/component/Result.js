@@ -24,7 +24,7 @@ function FlightInfo(result) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  
+
   return (
     <>
       <Button className="nextButton btn-ckt" onClick={handleShow}>
@@ -77,13 +77,12 @@ function FlightInfo(result) {
 }
 
 function Result(flightData) {
-// if flightData is not empty, then do this
-  if (flightData.flightData.length === 0) {
-    console.log("flightData is empty");
-    console.log(flightData.flightData);
+  flightData = flightData.flightData;
+  if (flightData.length === 0) {
     return <div></div>;
-}
+  }
   
+  console.log(flightData);
 
   return sampleResults.map((result) => (
     <Row className="result-card mx-auto">
