@@ -28,5 +28,10 @@
 .results-container {
   height: 1000px;
   overflow-y: scroll;
-  
+  scrollbar-width: none;
+
+}
+
+.results-container::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
 }
