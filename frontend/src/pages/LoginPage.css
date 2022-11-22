@@ -1,0 +1,37 @@
+.login {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-side {
+    border: 1px solid red;
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: azure;
+}
+
+.right-side {
+    border: 1px solid blue;
+    width: 40%;
+    height: 100vh;
+}
+
+.right-side img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-new {
+    display: flex;
+    flex-direction: row;
+}

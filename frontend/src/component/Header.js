@@ -137,7 +137,9 @@ function Header() {
             </a>
           </li>
           <li class="nav-item">
-            <InfoModal />
+            <a class="nav-link" href="/login">
+              Login
+            </a>
           </li>
         </ul>
       </div>
