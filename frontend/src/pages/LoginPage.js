@@ -9,7 +9,7 @@ function LoginPage() {
       <div className="left-side">
         <img src={logo} alt="CKT logo" />
         <h1>CKT, find all your travel needs!</h1>
-        <p>Please login to your account</p>
+        <h5>Please login to your account</h5>
         <form>
           <input type="text" placeholder="Email" name="email" required></input>
           <input
@@ -22,7 +22,7 @@ function LoginPage() {
         <button>Login!</button>
         <a href="#">Forgot password?</a>
         <div className="create-new">
-          <p>Don't have an account yet?</p>
+          <p>Don't have an account yet? &nbsp;</p>
           <a href="/register">Create one!</a>
         </div>
       </div>
