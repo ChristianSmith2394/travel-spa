@@ -73,3 +73,7 @@
 .loginButton:hover {
     background-color: rgb(0, 60, 59);
 }
+
+.page-up {
+    margin-bottom: 10rem;
+}
