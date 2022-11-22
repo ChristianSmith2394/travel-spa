@@ -4,7 +4,6 @@
 }
 
 .left-side {
-    border: 1px solid red;
     width: 60%;
     height: 100vh;
     display: flex;
@@ -15,7 +14,6 @@
 }
 
 .right-side {
-    border: 1px solid blue;
     width: 40%;
     height: 100vh;
     position: relative;
@@ -30,11 +28,12 @@
 
 .img-text {
     position: absolute;
-    top: 50%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 form {
