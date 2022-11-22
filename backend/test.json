@@ -1,0 +1,378 @@
+[
+    {
+        "Departure": [
+            {
+                "id": "1",
+                "itinerary": 1,
+                "segment": 1,
+                "segments": 3,
+                "segDuration": "PT2H31M",
+                "departureCode": "ACY",
+                "departureTime": "2022-11-23T12:20:00",
+                "arrivalCode": "MCO",
+                "arrivalTime": "2022-11-23T14:51:00",
+                "price": "2325.50",
+                "carrierCode": "NK",
+                "itinDuration": "PT24H53M"
+            },
+            {
+                "id": "1",
+                "itinerary": 1,
+                "segment": 2,
+                "segments": 3,
+                "segDuration": "PT1H40M",
+                "departureCode": "MCO",
+                "departureTime": "2022-11-23T20:51:00",
+                "arrivalCode": "ATL",
+                "arrivalTime": "2022-11-23T22:31:00",
+                "price": "2325.50",
+                "carrierCode": "NK",
+                "itinDuration": "PT24H53M"
+            },
+            {
+                "id": "1",
+                "itinerary": 1,
+                "segment": 3,
+                "segments": 3,
+                "segDuration": "PT2H43M",
+                "departureCode": "ATL",
+                "departureTime": "2022-11-24T10:30:00",
+                "arrivalCode": "MSP",
+                "arrivalTime": "2022-11-24T12:13:00",
+                "price": "2325.50",
+                "carrierCode": "NK",
+                "itinDuration": "PT24H53M"
+            }
+        ],
+        "Return": "nan"
+    },
+    {
+        "Departure": "nan",
+        "Return": [
+            {
+                "id": "1",
+                "itinerary": 2,
+                "segment": 1,
+                "segments": 3,
+                "segDuration": "PT1H42M",
+                "departureCode": "MSP",
+                "departureTime": "2022-11-29T18:45:00",
+                "arrivalCode": "DTW",
+                "arrivalTime": "2022-11-29T21:27:00",
+                "price": "2325.50",
+                "carrierCode": "NK",
+                "itinDuration": "PT38H5M"
+            },
+            {
+                "id": "1",
+                "itinerary": 2,
+                "segment": 2,
+                "segments": 3,
+                "segDuration": "PT1H50M",
+                "departureCode": "DTW",
+                "departureTime": "2022-11-30T11:00:00",
+                "arrivalCode": "MYR",
+                "arrivalTime": "2022-11-30T12:50:00",
+                "price": "2325.50",
+                "carrierCode": "NK",
+                "itinDuration": "PT38H5M"
+            },
+            {
+                "id": "1",
+                "itinerary": 2,
+                "segment": 3,
+                "segments": 3,
+                "segDuration": "PT1H20M",
+                "departureCode": "MYR",
+                "departureTime": "2022-12-01T08:30:00",
+                "arrivalCode": "ACY",
+                "arrivalTime": "2022-12-01T09:50:00",
+                "price": "2325.50",
+                "carrierCode": "NK",
+                "itinDuration": "PT38H5M"
+            }
+        ]
+    },
+    {
+        "Departure": [
+            {
+                "id": "2",
+                "itinerary": 1,
+                "segment": 1,
+                "segments": 3,
+                "segDuration": "PT2H40M",
+                "departureCode": "ACY",
+                "departureTime": "2022-11-23T10:25:00",
+                "arrivalCode": "FLL",
+                "arrivalTime": "2022-11-23T13:05:00",
+                "price": "2325.50",
+                "carrierCode": "NK",
+                "itinDuration": "PT26H48M"
+            },
+            {
+                "id": "2",
+                "itinerary": 1,
+                "segment": 2,
+                "segments": 3,
+                "segDuration": "PT1H58M",
+                "departureCode": "FLL",
+                "departureTime": "2022-11-23T19:00:00",
+                "arrivalCode": "ATL",
+                "arrivalTime": "2022-11-23T20:58:00",
+                "price": "2325.50",
+                "carrierCode": "NK",
+                "itinDuration": "PT26H48M"
+            },
+            {
+                "id": "2",
+                "itinerary": 1,
+                "segment": 3,
+                "segments": 3,
+                "segDuration": "PT2H43M",
+                "departureCode": "ATL",
+                "departureTime": "2022-11-24T10:30:00",
+                "arrivalCode": "MSP",
+                "arrivalTime": "2022-11-24T12:13:00",
+                "price": "2325.50",
+                "carrierCode": "NK",
+                "itinDuration": "PT26H48M"
+            }
+        ],
+        "Return": "nan"
+    },
+    {
+        "Departure": "nan",
+        "Return": [
+            {
+                "id": "2",
+                "itinerary": 2,
+                "segment": 1,
+                "segments": 3,
+                "segDuration": "PT1H42M",
+                "departureCode": "MSP",
+                "departureTime": "2022-11-29T18:45:00",
+                "arrivalCode": "DTW",
+                "arrivalTime": "2022-11-29T21:27:00",
+                "price": "2325.50",
+                "carrierCode": "NK",
+                "itinDuration": "PT38H5M"
+            },
+            {
+                "id": "2",
+                "itinerary": 2,
+                "segment": 2,
+                "segments": 3,
+                "segDuration": "PT1H50M",
+                "departureCode": "DTW",
+                "departureTime": "2022-11-30T11:00:00",
+                "arrivalCode": "MYR",
+                "arrivalTime": "2022-11-30T12:50:00",
+                "price": "2325.50",
+                "carrierCode": "NK",
+                "itinDuration": "PT38H5M"
+            },
+            {
+                "id": "2",
+                "itinerary": 2,
+                "segment": 3,
+                "segments": 3,
+                "segDuration": "PT1H20M",
+                "departureCode": "MYR",
+                "departureTime": "2022-12-01T08:30:00",
+                "arrivalCode": "ACY",
+                "arrivalTime": "2022-12-01T09:50:00",
+                "price": "2325.50",
+                "carrierCode": "NK",
+                "itinDuration": "PT38H5M"
+            }
+        ]
+    },
+    {
+        "Departure": [
+            {
+                "id": "3",
+                "itinerary": 1,
+                "segment": 1,
+                "segments": 3,
+                "segDuration": "PT2H40M",
+                "departureCode": "ACY",
+                "departureTime": "2022-11-23T10:25:00",
+                "arrivalCode": "FLL",
+                "arrivalTime": "2022-11-23T13:05:00",
+                "price": "2325.50",
+                "carrierCode": "NK",
+                "itinDuration": "PT26H48M"
+            },
+            {
+                "id": "3",
+                "itinerary": 1,
+                "segment": 2,
+                "segments": 3,
+                "segDuration": "PT1H56M",
+                "departureCode": "FLL",
+                "departureTime": "2022-11-23T21:00:00",
+                "arrivalCode": "ATL",
+                "arrivalTime": "2022-11-23T22:56:00",
+                "price": "2325.50",
+                "carrierCode": "NK",
+                "itinDuration": "PT26H48M"
+            },
+            {
+                "id": "3",
+                "itinerary": 1,
+                "segment": 3,
+                "segments": 3,
+                "segDuration": "PT2H43M",
+                "departureCode": "ATL",
+                "departureTime": "2022-11-24T10:30:00",
+                "arrivalCode": "MSP",
+                "arrivalTime": "2022-11-24T12:13:00",
+                "price": "2325.50",
+                "carrierCode": "NK",
+                "itinDuration": "PT26H48M"
+            }
+        ],
+        "Return": "nan"
+    },
+    {
+        "Departure": "nan",
+        "Return": [
+            {
+                "id": "3",
+                "itinerary": 2,
+                "segment": 1,
+                "segments": 3,
+                "segDuration": "PT1H42M",
+                "departureCode": "MSP",
+                "departureTime": "2022-11-29T18:45:00",
+                "arrivalCode": "DTW",
+                "arrivalTime": "2022-11-29T21:27:00",
+                "price": "2325.50",
+                "carrierCode": "NK",
+                "itinDuration": "PT38H5M"
+            },
+            {
+                "id": "3",
+                "itinerary": 2,
+                "segment": 2,
+                "segments": 3,
+                "segDuration": "PT1H50M",
+                "departureCode": "DTW",
+                "departureTime": "2022-11-30T11:00:00",
+                "arrivalCode": "MYR",
+                "arrivalTime": "2022-11-30T12:50:00",
+                "price": "2325.50",
+                "carrierCode": "NK",
+                "itinDuration": "PT38H5M"
+            },
+            {
+                "id": "3",
+                "itinerary": 2,
+                "segment": 3,
+                "segments": 3,
+                "segDuration": "PT1H20M",
+                "departureCode": "MYR",
+                "departureTime": "2022-12-01T08:30:00",
+                "arrivalCode": "ACY",
+                "arrivalTime": "2022-12-01T09:50:00",
+                "price": "2325.50",
+                "carrierCode": "NK",
+                "itinDuration": "PT38H5M"
+            }
+        ]
+    },
+    {
+        "Departure": [
+            {
+                "id": "4",
+                "itinerary": 1,
+                "segment": 1,
+                "segments": 3,
+                "segDuration": "PT2H31M",
+                "departureCode": "ACY",
+                "departureTime": "2022-11-23T12:20:00",
+                "arrivalCode": "MCO",
+                "arrivalTime": "2022-11-23T14:51:00",
+                "price": "2325.50",
+                "carrierCode": "NK",
+                "itinDuration": "PT29H21M"
+            },
+            {
+                "id": "4",
+                "itinerary": 1,
+                "segment": 2,
+                "segments": 3,
+                "segDuration": "PT1H40M",
+                "departureCode": "MCO",
+                "departureTime": "2022-11-23T20:51:00",
+                "arrivalCode": "ATL",
+                "arrivalTime": "2022-11-23T22:31:00",
+                "price": "2325.50",
+                "carrierCode": "NK",
+                "itinDuration": "PT29H21M"
+            },
+            {
+                "id": "4",
+                "itinerary": 1,
+                "segment": 3,
+                "segments": 3,
+                "segDuration": "PT2H41M",
+                "departureCode": "ATL",
+                "departureTime": "2022-11-24T15:00:00",
+                "arrivalCode": "MSP",
+                "arrivalTime": "2022-11-24T16:41:00",
+                "price": "2325.50",
+                "carrierCode": "NK",
+                "itinDuration": "PT29H21M"
+            }
+        ],
+        "Return": "nan"
+    },
+    {
+        "Departure": "nan",
+        "Return": [
+            {
+                "id": "4",
+                "itinerary": 2,
+                "segment": 1,
+                "segments": 3,
+                "segDuration": "PT1H42M",
+                "departureCode": "MSP",
+                "departureTime": "2022-11-29T18:45:00",
+                "arrivalCode": "DTW",
+                "arrivalTime": "2022-11-29T21:27:00",
+                "price": "2325.50",
+                "carrierCode": "NK",
+                "itinDuration": "PT38H5M"
+            },
+            {
+                "id": "4",
+                "itinerary": 2,
+                "segment": 2,
+                "segments": 3,
+                "segDuration": "PT1H50M",
+                "departureCode": "DTW",
+                "departureTime": "2022-11-30T11:00:00",
+                "arrivalCode": "MYR",
+                "arrivalTime": "2022-11-30T12:50:00",
+                "price": "2325.50",
+                "carrierCode": "NK",
+                "itinDuration": "PT38H5M"
+            },
+            {
+                "id": "4",
+                "itinerary": 2,
+                "segment": 3,
+                "segments": 3,
+                "segDuration": "PT1H20M",
+                "departureCode": "MYR",
+                "departureTime": "2022-12-01T08:30:00",
+                "arrivalCode": "ACY",
+                "arrivalTime": "2022-12-01T09:50:00",
+                "price": "2325.50",
+                "carrierCode": "NK",
+                "itinDuration": "PT38H5M"
+            }
+        ]
+    }
+]
