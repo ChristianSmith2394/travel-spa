@@ -19,7 +19,7 @@ function LoginPage() {
             required
           ></input>
         </form>
-        <button>Login!</button>
+        <button id="loginButton">Login!</button>
         <a href="#">Forgot password?</a>
         <div className="create-new">
           <p>Don't have an account yet? &nbsp;</p>
