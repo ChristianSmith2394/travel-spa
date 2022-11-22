@@ -202,7 +202,7 @@ function Test(flightData) {
 
 function Result() {
   return (
-    <Container className="results-container">
+    <Container fluid className="results-container">
       <Test />
     </Container>
   );
