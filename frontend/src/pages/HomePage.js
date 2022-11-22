@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../component/Header";
-import Footer from "../component/Footer";
 import TripForm from "../component/TripForm";
 import Map from "../component/Map";
 import Result from "../component/Result";
@@ -34,7 +33,6 @@ function HomePage() {
       />
       <Map departCode={departCode} arriveCode={arriveCode} />
       <Result flightData={flightData} />
-      <Footer />
     </div>
   );
 }

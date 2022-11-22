@@ -23,7 +23,7 @@ function LoginPage() {
         <a href="#">Forgot password?</a>
         <div className="create-new">
           <p>Don't have an account yet? &nbsp;</p>
-          <a href="/register">Create one!</a>
+          <a href="/register" className="page-up">Create one!</a>
         </div>
       </div>
       <div className="right-side">
