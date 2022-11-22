@@ -11,19 +11,28 @@ function LoginPage() {
         <h1>CKT, find all your travel needs!</h1>
         <h5>Please login to your account</h5>
         <form className="loginForm">
-          <input className="loginInput" type="text" placeholder="Email" name="email" required></input>
-          <input className="loginInput"
+          <input
+            className="loginInput"
+            type="email"
+            placeholder="Email"
+            name="email"
+            required
+          />
+          <input
+            className="loginInput"
             type="password"
             placeholder="Password"
             name="password"
             required
-          ></input>
+          />
         </form>
         <button className="loginButton">Login!</button>
         <a href="#">Forgot password?</a>
         <div className="create-new">
           <p>Don't have an account yet? &nbsp;</p>
-          <a href="/register" className="page-up">Create one!</a>
+          <a href="/register" className="page-up">
+            Create one!
+          </a>
         </div>
       </div>
       <div className="right-side">

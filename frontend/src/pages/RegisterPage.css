@@ -12,6 +12,13 @@
     height: auto;
 }
 
+.registerForm {
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    margin: 1rem;
+}
+
 .registerInput {
     border-radius: 25px;
     border: 1px solid rgb(0, 60, 59);
@@ -21,7 +28,7 @@
 
 .registerButton {
     background-color: rgba(0, 60, 59, .6);
-    width: 30vw;
+    width: 25vw;
     color: azure;
     border-radius: 25px;
     border: none;
