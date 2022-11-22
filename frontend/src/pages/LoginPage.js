@@ -10,16 +10,16 @@ function LoginPage() {
         <img src={logo} alt="CKT logo" />
         <h1>CKT, find all your travel needs!</h1>
         <h5>Please login to your account</h5>
-        <form>
-          <input type="text" placeholder="Email" name="email" required></input>
-          <input
+        <form className="loginForm">
+          <input className="loginInput" type="text" placeholder="Email" name="email" required></input>
+          <input className="loginInput"
             type="password"
             placeholder="Password"
             name="password"
             required
           ></input>
         </form>
-        <button id="loginButton">Login!</button>
+        <button className="loginButton">Login!</button>
         <a href="#">Forgot password?</a>
         <div className="create-new">
           <p>Don't have an account yet? &nbsp;</p>
