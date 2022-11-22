@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import sampleResults from "../data/sampleResults.json";
 import Map from "./Map";
-import { Modal, Button, Container, Accordion } from "react-bootstrap";
+import { Modal, Button, Container, Accordion, ScrollView } from "react-bootstrap";
 import axios from "axios";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -76,11 +76,11 @@ function FlightInfo(result) {
   );
 }
 
-function Result(flightData) {
-  flightData = flightData.flightData;
-  if (flightData.length === 0) {
-    return <div></div>;
-  }
+function Test(flightData) {
+  // flightData = flightData.flightData;
+  // if (flightData.length === 0) {
+  //   return <div></div>;
+  // }
 
   console.log(flightData);
 
@@ -199,5 +199,14 @@ function Result(flightData) {
     </Row>
   ));
 }
+
+function Result() {
+  return (
+    <Container className="results-container">
+      <Test />
+    </Container>
+  );
+}
+
 
 export default Result;
