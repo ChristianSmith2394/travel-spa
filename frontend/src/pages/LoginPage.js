@@ -28,6 +28,13 @@ function LoginPage() {
       </div>
       <div className="right-side">
         <img src={port3} alt="login banner" />
+        <div className="img-text">
+          Find the best flights for your budget We help you find the cheapest
+          flights by comparing prices from hundreds of airlines and travel
+          agencies. Whether you're looking for a last-minute deal or want to
+          plan ahead, we'll always give you the best possible price for your
+          budget.
+        </div>
       </div>
     </div>
   );

@@ -18,12 +18,23 @@
     border: 1px solid blue;
     width: 40%;
     height: 100vh;
+    position: relative;
+    text-align: center;
 }
 
 .right-side img {
     flex-shrink: 0;
     min-width: 100%;
     min-height: 100%
+}
+
+.img-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 18px;
 }
 
 form {
