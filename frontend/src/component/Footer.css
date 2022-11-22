@@ -1,7 +1,8 @@
 footer {
-    display: flex;
+    display: block;
     width: 100%;
-    justify-content: center;
+    /* justify-content: center; */
+    text-align: center;
     position: fixed;
     bottom: 0;
     background-color: #f0ffff;
