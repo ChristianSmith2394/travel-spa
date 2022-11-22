@@ -54,8 +54,10 @@ def api():
   
     dict_list = []
     for d in range(len(data)):
+        flight = d+1
         id = data[d]['id']
         price = data[d]['price']['total']
+        itinerary_list = []
         for i in range(len(data[d]['itineraries'])):
             itinerary = i+1
             segment_list = []
@@ -85,8 +87,8 @@ def api():
                                 'itinDuration': iDuration
                                 }
                 segment_list.append(segment_dict)
-
-            dict_list.append({f"{'Departure' if itinerary == 1 else 'Return'}": segment_list})
+            itinerary_list.append({f"{'Departure' if itinerary == 1 else 'Return'}": segment_list})
+        dict_list.append({f"flightOffer{flight}": itinerary_list})
 
     print(dict_list)
     return jsonify(dict_list)
