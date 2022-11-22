@@ -62,7 +62,7 @@ input {
     padding-left: 15px;
 }
 
-button {
+#loginButton {
     background-color: rgba(0, 60, 59, .6);
     width: 35%;
     color: azure;
@@ -70,6 +70,6 @@ button {
     border: none;
 }
 
-button:hover {
+#loginButton:hover {
     background-color: rgb(0, 60, 59);
 }
