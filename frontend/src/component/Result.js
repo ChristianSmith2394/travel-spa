@@ -81,7 +81,7 @@ function Result(flightData) {
   if (flightData.length === 0) {
     return <div></div>;
   }
-  
+
   console.log(flightData);
 
   return sampleResults.map((result) => (
