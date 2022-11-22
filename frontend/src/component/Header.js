@@ -2,6 +2,7 @@ import React, { useState } from "react";
 // import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import "./Header.css";
+import bg from "../assets/formbg.png";
 import { Modal, Button, Form, Dropdown } from "react-bootstrap";
 import { auth } from "../firebase";
 import { useStateValue } from "./StateProvider";
@@ -112,50 +113,39 @@ function InfoModal() {
 
 function Header() {
   return (
-    <nav className="navbar navbar-light navbar-expand-sm">
-      <div className="container-fluid">
-        <a className="col-2 navbar-brand" href="/">
-          <img src={logo} alt="logo" id="logo" />
-        </a>
-        <ul className="navbar-nav offset-6 me-auto">
-          <li className="nav-item">
-            <a className="nav-link" href="/">
-              Home
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="/about">
-              About
-            </a>
-          </li>
-          {/* <li className="nav-item">
-            <a className="nav-link" href="/account">
-              Account
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="/register">
-              Register
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="/login">
-              Login
-            </a>
-          </li> */}
-          <li className="nav-item">
-          <Dropdown>
-            <Dropdown.Toggle variant="ckt" icon="">Login</Dropdown.Toggle>
-            <Dropdown.Menu>
-              <Dropdown.Item href="login">Login</Dropdown.Item>
-              <Dropdown.Item href="register">Register</Dropdown.Item>
-              <Dropdown.Item href="account">Account</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <div className="header">
+      <nav className="navbar navbar-light navbar-expand-sm">
+        <div className="container-fluid">
+          <a className="col-2 navbar-brand" href="/">
+            <img src={logo} alt="logo" id="logo" />
+          </a>
+          <ul className="navbar-nav offset-6 me-auto">
+            <li className="nav-item">
+              <a className="nav-link" href="/">
+                Home
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/about">
+                About
+              </a>
+            </li>
+            <li className="nav-item">
+              <Dropdown>
+                <Dropdown.Toggle variant="ckt" icon="">
+                  Login
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                  <Dropdown.Item href="login">Login</Dropdown.Item>
+                  <Dropdown.Item href="register">Register</Dropdown.Item>
+                  <Dropdown.Item href="account">Account</Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   );
 }
 
