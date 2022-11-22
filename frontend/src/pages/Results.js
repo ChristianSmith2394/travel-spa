@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../component/Header";
-import Footer from "../component/Footer";
 // import Map from "../component/Map";
 import Result from "../component/Result";
 import "./Results.css";
@@ -13,7 +12,6 @@ function Results() {
         <Map />
       </div> */}
       <Result />
-      <Footer />
     </div>
   );
 }
