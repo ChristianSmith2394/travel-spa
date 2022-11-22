@@ -32,6 +32,7 @@
     color: azure;
     border-radius: 25px;
     border: none;
+    margin-bottom: 13rem;
 }
 
 .registerButton:hover {
