@@ -19,8 +19,13 @@
     background-color: rgba(0, 60, 59, .2);
   }
   
-  .result-card:hover{
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
-    background-color: rgba(0, 60, 59, .5);
+.result-card:hover{
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+  background-color: rgba(0, 60, 59, .5);
+}
+
+.results-container {
+  height: 1000px;
+  overflow-y: scroll;
 }
