@@ -13,6 +13,12 @@
     background-color: azure;
 }
 
+.left-side img {
+    width: 35%;
+    height: auto;
+    margin-bottom: 3git rem;
+}
+
 .right-side {
     width: 40%;
     height: 100vh;
