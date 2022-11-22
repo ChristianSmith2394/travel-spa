@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Result.css";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
@@ -6,6 +6,7 @@ import Col from "react-bootstrap/Col";
 import sampleResults from "../data/sampleResults.json";
 import Map from "./Map";
 import { Modal, Button, Container, Accordion } from "react-bootstrap";
+import axios from "axios";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -23,7 +24,7 @@ function FlightInfo(result) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
+  
   return (
     <>
       <Button className="nextButton btn-ckt" onClick={handleShow}>
@@ -36,28 +37,29 @@ function FlightInfo(result) {
         </Modal.Header>
         <Modal.Body>
           <Container>
-              <Accordion flush>
-                <Accordion.Item eventKey="0">
-                  <Accordion.Header>Destination Flight</Accordion.Header>
-                  <Accordion.Body>
+            <Accordion flush>
+              <Accordion.Item eventKey="0">
+                <Accordion.Header>Destination Flight</Accordion.Header>
+                <Accordion.Body>
                   Add information about the Destination Flight here
-                    <Map
-                      departCode={result.departCodeDestination}
-                      arriveCode={result.arriveCodeDestination}
-                    />
-                  </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="1">
-                  <Accordion.Header>Return Flight</Accordion.Header>
-                  <Accordion.Body>
-                    Add information about the Return Flight here
-                    <Map id="modalMap"
-                      departCode={result.departCodeReturn}
-                      arriveCode={result.arriveCodeReturn}
-                    />
-                  </Accordion.Body>
-                </Accordion.Item>
-              </Accordion>
+                  <Map
+                    departCode={result.departCodeDestination}
+                    arriveCode={result.arriveCodeDestination}
+                  />
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item eventKey="1">
+                <Accordion.Header>Return Flight</Accordion.Header>
+                <Accordion.Body>
+                  Add information about the Return Flight here
+                  <Map
+                    id="modalMap"
+                    departCode={result.departCodeReturn}
+                    arriveCode={result.arriveCodeReturn}
+                  />
+                </Accordion.Body>
+              </Accordion.Item>
+            </Accordion>
           </Container>
         </Modal.Body>
         <Modal.Footer>
@@ -74,12 +76,14 @@ function FlightInfo(result) {
   );
 }
 
-function Result(departCode, arriveCode, departDate, returnDate, passengers) {
-  // const handleOnClick = (result) => {
-  //     console.log(result);
-
-  //
-  //   };
+function Result(flightData) {
+// if flightData is not empty, then do this
+  if (flightData.flightData.length === 0) {
+    console.log("flightData is empty");
+    console.log(flightData.flightData);
+    return <div></div>;
+}
+  
 
   return sampleResults.map((result) => (
     <Row className="result-card mx-auto">

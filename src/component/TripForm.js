@@ -10,6 +10,8 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import items from "../data/airports.json";
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
+import axios from "axios";
+
 // import moment from "moment";
 
 function TripForm({
@@ -18,19 +20,21 @@ function TripForm({
   departDate,
   returnDate,
   passengers,
+  flightData,
   setDepartCode,
   setArriveCode,
   setDepartDate,
   setReturnDate,
   setPassengers,
+  setFlightData
 }) {
   const [alignment, setAlignment] = React.useState("round-trip");
 
   const handleOnSearch = (string, results) => {
     // onSearch will have the first callback parameter as
     // the string searched. For the second, the results.
-    console.log(string, results);
-    return string, results;
+    // console.log(string, results);
+    // return string, results;
   };
 
   const handleOnHover = (result) => {
@@ -42,14 +46,37 @@ function TripForm({
   const handleOnSelectDepart = (item) => {
     // the item selected
     setDepartCode(item.code);
-    console.log(item.code);
+    // console.log(item.code);
     // return item;
   };
 
   const handleOnSelectArrive = (item) => {
     // the item selected
     setArriveCode(item.code);
-    console.log(item.code);
+    // console.log(item.code);
+    // return item;
+  };
+
+  const handleOnSelectPassengers = (item) => {
+    // the item selected
+    console.log(item.target.value);
+    setPassengers(item.target.value);
+    // return item;
+  };
+
+  const handleOnSelectDepartDate = (item) => {
+    // the item selected
+    item = formatDate(item)
+    setDepartDate(item);
+    console.log(item);
+    // return item;
+  };
+  const
+   handleOnSelectReturnDate = (item) => {
+    // the item selected
+    item = formatDate(item)
+    setReturnDate(item);
+    console.log(item);
     // return item;
   };
 
@@ -58,7 +85,6 @@ function TripForm({
   };
 
   const formatDate = (date) => {
-    // without moment.js
     const day = date["$D"];
     const month = date["$M"] + 1;
     const year = date["$y"];
@@ -66,12 +92,30 @@ function TripForm({
   };
 
   const handleOnSubmit = () => {
-    console.log("departCode: " + departCode);
-    console.log("arriveCode: " + arriveCode);
-    console.log("passengers: " + passengers);
+    console.log(departCode);
+    console.log(arriveCode);
     console.log(departDate);
     console.log(returnDate);
-  };
+    console.log(passengers);
+
+    
+    axios.post("http://127.0.0.1:5000/api", 
+      {
+        "departCode": departCode,
+        "arriveCode": arriveCode,
+        "departDate": departDate,
+        "returnDate": returnDate,
+        "passengers": passengers
+      })
+      .then((res) => {
+        console.log(res.data);
+        setFlightData(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+    };
 
   const formatResult = (item) => {
     return (
@@ -147,7 +191,7 @@ function TripForm({
               />
             </div>
             <div className="col px-2">
-              <input
+              <select
                 type="number"
                 className="form-control"
                 id="passengersInput"
@@ -166,9 +210,15 @@ function TripForm({
                   lineColor: "rgb(232, 234, 237)",
                   placeholderColor: "grey",
                 }}
-                value={passengers}
-                onChange={(e) => setPassengers(e.target.value)}
-              />
+                onChange={handleOnSelectPassengers}
+              >
+                <option value="1">1 Passenger</option>
+                <option value="2">2 Passengers</option>
+                <option value="3">3 Passengers</option>
+                <option value="4">4 Passengers</option>
+                <option value="5">5 Passengers</option>
+                
+              </select>
             </div>
           </div>
           <div className="row px-2">
@@ -177,9 +227,7 @@ function TripForm({
                 <DatePicker
                   className="col-6 px-2"
                   label="Departure Date"
-                  onChange={(newValue) => {
-                    setDepartDate(formatDate(newValue));
-                  }}
+                  onChange={handleOnSelectDepartDate}
                   value={departDate}
                   renderInput={(params) => <TextField {...params} />}
                   required
@@ -191,10 +239,10 @@ function TripForm({
                   <DatePicker
                     className="col px-2"
                     label="Departure Date"
-                    value={departDate}
                     onChange={(newValue) => {
-                      setDepartDate(formatDate(newValue));
+                      handleOnSelectDepartDate(newValue);
                     }}
+                    value={departDate}
                     renderInput={(params) => <TextField {...params} />}
                     required
                   />
@@ -204,7 +252,7 @@ function TripForm({
                     className="col px-2"
                     label="Return Date"
                     onChange={(newValue) => {
-                      setReturnDate(formatDate(newValue));
+                      handleOnSelectReturnDate(newValue);
                     }}
                     value={returnDate}
                     renderInput={(params) => <TextField {...params} />}
