@@ -7,6 +7,8 @@ import { useNavigate } from "react-router-dom";
 
 function LoginPage() {
   const history = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const signIn = (e) => {
     e.preventDefault();
@@ -29,6 +31,7 @@ function LoginPage() {
           <input
             className="loginInput"
             type="email"
+            value={email}
             placeholder="Email"
             name="email"
             required
@@ -36,12 +39,15 @@ function LoginPage() {
           <input
             className="loginInput"
             type="password"
+            value={password}
             placeholder="Password"
             name="password"
             required
           />
         </form>
-        <button className="loginButton">Login!</button>
+        <button onClick={signIn} className="loginButton">
+          Login!
+        </button>
         <a href="#">Forgot password?</a>
         <div className="create-new">
           <p>Don't have an account yet? &nbsp;</p>

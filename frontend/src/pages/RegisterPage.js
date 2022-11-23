@@ -74,7 +74,9 @@ function RegisterPage() {
             name="airport"
           />
         </form>
-        <button className="registerButton">Register!</button>
+        <button onClick={register} className="registerButton">
+          Register!
+        </button>
       </div>
     </div>
   );
