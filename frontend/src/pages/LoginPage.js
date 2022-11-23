@@ -32,6 +32,7 @@ function LoginPage() {
             className="loginInput"
             type="email"
             value={email}
+            onChange={(e) => setEmail(e.target.value)}
             placeholder="Email"
             name="email"
             required
@@ -40,6 +41,7 @@ function LoginPage() {
             className="loginInput"
             type="password"
             value={password}
+            onChange={(e) => setPassword(e.target.value)}
             placeholder="Password"
             name="password"
             required
@@ -57,7 +59,7 @@ function LoginPage() {
         </div>
       </div>
       <div className="right-side">
-        <img src={port3} alt="login banner" />
+        <img src={port3} alt="login banner" className='right-banner'/>
         <div className="img-text">
           Find the best flights for your budget We help you find the cheapest
           flights by comparing prices from hundreds of airlines and travel
