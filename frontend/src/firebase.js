@@ -1,17 +1,15 @@
-// THIS FILE NEEDS TO BE UPDATED ONCE BUILD FILE MADE
-
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBFv2geIJBN1aLAzhsaB3-OnDxwNv58LY8",
-  authDomain: "ecom-store-cs94.firebaseapp.com",
-  projectId: "ecom-store-cs94",
-  storageBucket: "ecom-store-cs94.appspot.com",
-  messagingSenderId: "506621747136",
-  appId: "1:506621747136:web:57e88488ed43486159b225",
-  measurementId: "G-5WKYFRH1DV",
+  apiKey: "AIzaSyCQb099rGIIAbyho7htC8LWgHNSXZ3W6SU",
+  authDomain: "travel-ckt.firebaseapp.com",
+  projectId: "travel-ckt",
+  storageBucket: "travel-ckt.appspot.com",
+  messagingSenderId: "927333358911",
+  appId: "1:927333358911:web:e1428ef808a1c40e7e878a",
+  measurementId: "G-C3L26P154Z",
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
