@@ -1,9 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import "./RegisterPage.css";
 import logo from "../assets/logo.png";
 import Header from "../component/Header";
+import { auth } from "../firebase";
+import { useNavigate } from "react-router-dom";
 
 function RegisterPage() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const history = useNavigate();
+
+  const register = (e) => {
+    e.preventDefault();
+
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((auth) => {
+        // it successfully created a new user with email and password
+        if (auth) {
+          history("/");
+        }
+      })
+      .catch((error) => alert(error.message));
+  };
+
   return (
     <div>
       <Header />
@@ -53,7 +74,9 @@ function RegisterPage() {
             name="airport"
           />
         </form>
-        <button className="registerButton">Register!</button>
+        <button onClick={register} className="registerButton">
+          Register!
+        </button>
       </div>
     </div>
   );

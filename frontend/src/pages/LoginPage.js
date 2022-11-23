@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import "./LoginPage.css";
 import port3 from "../assets/port3.png";
 import logo from "../assets/logo.png";
+import { auth } from "../firebase";
+import { useNavigate } from "react-router-dom";
 
 function LoginPage() {
+  const history = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const signIn = (e) => {
+    e.preventDefault();
+
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((auth) => {
+        history("/");
+      })
+      .catch((error) => alert(error.message));
+  };
+
   return (
     <div className="login">
       <div className="left-side">
@@ -14,6 +31,7 @@ function LoginPage() {
           <input
             className="loginInput"
             type="email"
+            value={email}
             placeholder="Email"
             name="email"
             required
@@ -21,12 +39,15 @@ function LoginPage() {
           <input
             className="loginInput"
             type="password"
+            value={password}
             placeholder="Password"
             name="password"
             required
           />
         </form>
-        <button className="loginButton">Login!</button>
+        <button onClick={signIn} className="loginButton">
+          Login!
+        </button>
         <a href="#">Forgot password?</a>
         <div className="create-new">
           <p>Don't have an account yet? &nbsp;</p>
