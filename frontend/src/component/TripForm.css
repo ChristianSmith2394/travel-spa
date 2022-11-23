@@ -1,7 +1,6 @@
 .formContainer {
-    background-image: url("../assets/port5.png");
     min-width: 100%;
-    min-height: ;
+    min-height: 30vh;
     display: flex;
     align-items: center;
     background-color: azure;
@@ -11,6 +10,9 @@
     background-color: #f0ffffbf;
     margin-top: 4rem;
     margin-bottom: 4rem;
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
     
 .btn-ckt {

@@ -12,7 +12,7 @@ import TripForm from "../component/TripForm";
 
 const mapContainerStyle = {
   width: "100%",
-  height: "40vh",
+  height: "100vh",
 };
 
 function getCoords(airportCode) {

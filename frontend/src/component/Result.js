@@ -77,12 +77,10 @@ function FlightInfo(result) {
 }
 
 function Test(flightData) {
-  // flightData = flightData.flightData;
+  flightData = flightData.flightData;
   // if (flightData.length === 0) {
   //   return <div></div>;
   // }
-
-  console.log(flightData);
 
   return sampleResults.map((result) => (
     <Row className="result-card mx-auto">
