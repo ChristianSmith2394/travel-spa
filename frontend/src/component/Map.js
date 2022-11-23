@@ -5,14 +5,15 @@ import {
   MarkerF,
   PolylineF,
 } from "@react-google-maps/api";
-import mapStyles from "../mapStyles.json";
+import mapStyles from "./mapStyles.json";
 import { red } from "@mui/material/colors";
 import items from "../data/airports.json";
 import TripForm from "../component/TripForm";
+import Result from "../component/Result";
 
 const mapContainerStyle = {
   width: "100%",
-  height: "100vh",
+  height: "90vh",
 };
 
 function getCoords(airportCode) {
@@ -116,6 +117,8 @@ function Map({
           setPassengers={setPassengers}
           setFlightData={setFlightData}
         />
+        <Result flightData={flightData} />
+
       </GoogleMap>
     </div>
   );

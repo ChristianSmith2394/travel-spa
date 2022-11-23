@@ -29,7 +29,6 @@ function HomePage() {
         setReturnDate={setReturnDate}
         setPassengers={setPassengers}
         setFlightData={setFlightData}/>
-      <Result flightData={flightData} />
     </div>
   );
 }
