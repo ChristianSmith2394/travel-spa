@@ -8,6 +8,7 @@ import {
 import mapStyles from "../mapStyles.json";
 import { red } from "@mui/material/colors";
 import items from "../data/airports.json";
+import TripForm from "../component/TripForm";
 
 const mapContainerStyle = {
   width: "100%",
@@ -32,7 +33,20 @@ const options = {
   styles: mapStyles,
 };
 
-function Map({ departCode, arriveCode }) {
+function Map({
+  departCode,
+  arriveCode,
+  departDate,
+  returnDate,
+  passengers,
+  flightData,
+  setDepartCode,
+  setArriveCode,
+  setDepartDate,
+  setReturnDate,
+  setPassengers,
+  setFlightData,
+}) {
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: "AIzaSyARgEWVzXfMVGVtrXFmZHJwdL5yqxYFL_k",
   });
@@ -87,6 +101,20 @@ function Map({ departCode, arriveCode }) {
               },
             ],
           }}
+        />
+        <TripForm
+          departCode={departCode}
+          arriveCode={arriveCode}
+          departDate={departDate}
+          returnDate={returnDate}
+          passengers={passengers}
+          flightData={flightData}
+          setDepartCode={setDepartCode}
+          setArriveCode={setArriveCode}
+          setDepartDate={setDepartDate}
+          setReturnDate={setReturnDate}
+          setPassengers={setPassengers}
+          setFlightData={setFlightData}
         />
       </GoogleMap>
     </div>

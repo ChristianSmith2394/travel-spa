@@ -133,7 +133,7 @@ function TripForm({
   };
 
   return (
-    <div className="container formBG">
+    <div className="container formContainer">
       <div className="col"></div>
       <div className="col-10">
         <div className="container-fluid border rounded" id="form">
