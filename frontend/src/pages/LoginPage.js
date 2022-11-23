@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "./LoginPage.css";
 import port3 from "../assets/port3.png";
 import logo from "../assets/logo.png";
+import { auth } from "../firebase";
+import { useNavigate } from "react-router-dom";
 
 function LoginPage() {
+  const history = useNavigate();
+
+  const signIn = (e) => {
+    e.preventDefault();
+
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((auth) => {
+        history("/");
+      })
+      .catch((error) => alert(error.message));
+  };
+
   return (
     <div className="login">
       <div className="left-side">
