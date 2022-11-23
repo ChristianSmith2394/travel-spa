@@ -5,10 +5,10 @@
     background-size: cover;
     min-width: 100%;
     /* opacity: 50%; */
-    height: 10vh;
+    height: 8vh;
 }
 
-img {
+#logo {
     height: 8vh;
     width: auto;
 }
@@ -16,7 +16,7 @@ img {
 .nav-link {
     text-decoration: none;
     font-weight: 600;
-    color: black;
+    color: white;
 }
 
 .nav-item {
@@ -24,6 +24,3 @@ img {
     margin-right: 15px;
 }
 
-nav li a {
-    color: aqua;
-}
