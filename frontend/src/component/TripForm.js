@@ -134,8 +134,7 @@ function TripForm({
 
   return (
     <div className="container formContainer">
-      <div className="col"></div>
-      <div className="col-10">
+      <div className="col-10 offset-1">
         <div className="container-fluid border rounded" id="form">
           <div className="row pt-3 px-3">
             <ToggleButtonGroup
@@ -275,7 +274,6 @@ function TripForm({
           </div>
         </div>
       </div>
-      <div className="col"></div>
     </div>
   );
 }

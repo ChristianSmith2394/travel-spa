@@ -34,7 +34,7 @@
                 "visibility": "on"
             },
             {
-                "color": "#003c3b"
+                "color": "#0"
             }
         ]
     },
@@ -124,7 +124,7 @@
         "elementType": "geometry",
         "stylers": [
             {
-                "color": "#bbe7e1"
+                "color": "#83b2a0"
             }
         ]
     },

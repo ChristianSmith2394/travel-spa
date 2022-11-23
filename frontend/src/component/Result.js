@@ -20,62 +20,6 @@ import {
   faDollarSign,
 } from "@fortawesome/free-solid-svg-icons";
 
-function FlightInfo(result) {
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
-  return (
-    <>
-      <Button className="nextButton btn-ckt" onClick={handleShow}>
-        Details
-      </Button>
-
-      <Modal show={show} onHide={handleClose} size="lg">
-        <Modal.Header>
-          <Modal.Title>This is a Title Yo</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Container>
-            <Accordion flush>
-              <Accordion.Item eventKey="0">
-                <Accordion.Header>Destination Flight</Accordion.Header>
-                <Accordion.Body>
-                  Add information about the Destination Flight here
-                  <Map
-                    departCode={result.departCodeDestination}
-                    arriveCode={result.arriveCodeDestination}
-                  />
-                </Accordion.Body>
-              </Accordion.Item>
-              <Accordion.Item eventKey="1">
-                <Accordion.Header>Return Flight</Accordion.Header>
-                <Accordion.Body>
-                  Add information about the Return Flight here
-                  <Map
-                    id="modalMap"
-                    departCode={result.departCodeReturn}
-                    arriveCode={result.arriveCodeReturn}
-                  />
-                </Accordion.Body>
-              </Accordion.Item>
-            </Accordion>
-          </Container>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="ckt" type="submit" onClick={handleClose}>
-            Book
-          </Button>
-
-          <Button variant="" onClick={handleClose}>
-            Cancel
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    </>
-  );
-}
-
 function Test(flightData) {
   flightData = flightData.flightData;
   // if (flightData.length === 0) {
@@ -185,12 +129,10 @@ function Test(flightData) {
             <Card.Text>
               <FontAwesomeIcon icon={faDollarSign} /> {result.price}
             </Card.Text>
-            <FlightInfo
-              departCodeDestination={result.departCodeDestination}
-              arriveCodeDestination={result.arriveCodeDestination}
-              departCodeReturn={result.departCodeReturn}
-              arriveCodeReturn={result.arriveCodeReturn}
-            />
+            <Button className="nextButton btn-ckt" onClick={console.log("Deets clicked")}>
+        Details
+      </Button>
+
           </Card.Body>
         </Card>
       </Col>
