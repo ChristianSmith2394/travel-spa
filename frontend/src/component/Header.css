@@ -1,10 +1,5 @@
 .navbar {
-    background-color: azure;
-    background-image: url("../assets/formbg.png");
-    background-position: 50% 40%;
-    background-size: cover;
-    min-width: 100%;
-    /* opacity: 50%; */
+    background-color: rgba(0, 60, 59, .6);
     height: 10vh;
 }
 
