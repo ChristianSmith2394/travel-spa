@@ -1,12 +1,11 @@
-.results-container {
+.result-container {
   height: 55vh;
   overflow-y: scroll;
   scrollbar-width: none;
-  background-color: brown;
-  z-index: 0;
+  background-color: black; /* why tf doesn't this work */
 }
 
-.results-container::-webkit-scrollbar { 
+.result-container::-webkit-scrollbar { 
   display: none;
 }
 
