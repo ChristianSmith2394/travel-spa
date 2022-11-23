@@ -5,7 +5,7 @@
     background-size: cover;
     min-width: 100%;
     /* opacity: 50%; */
-    height: 8vh;
+    height: 10vh;
 }
 
 #logo {
@@ -16,7 +16,15 @@
 .nav-link {
     text-decoration: none;
     font-weight: 600;
-    color: white;
+    color: rgba(240, 255, 255, .8);
+    
+}
+
+.nav-link:hover {
+    text-decoration: none;
+    font-weight: 600;
+    color: rgba(240, 255, 255);
+    transform: scale(1.15);
 }
 
 .nav-item {
